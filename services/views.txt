@@ -1,0 +1,432 @@
+from django.shortcuts import render
+
+from django.shortcuts import redirect
+
+from . forms import ServiceModelForm, MyDetailsModelForm, ParcelDetailsModelForm, usersBookingDataForm, returnDetailsForm, deliveryDetailsForm, deliveryGuaranteeForm
+
+from django.contrib.auth.decorators import login_required
+
+from .models import DeliveryService, myDetailsModel, returnDetailsModel, usersBookingData, deliveryDetailsData, ServiceUserModel, ServiceModel, ServicePacketingDeliveryMainModel
+
+from django.db.models import Case, When, Value, IntegerField
+
+from django.contrib import messages
+
+from django.http import JsonResponse, HttpResponseBadRequest
+
+from django.shortcuts import get_object_or_404
+
+from django.core.mail import send_mail
+
+from django.template.loader import render_to_string
+
+from django.contrib.auth.models import User
+
+
+
+# Create your views here.
+@login_required
+def index(request):
+
+    
+    if request.method == "POST":
+        form = ServiceModelForm(request.POST)
+
+        if form.is_valid():
+            service_instance = form.save(commit=False)
+            service_instance.user = request.user 
+            service_instance.save()
+            print(service_instance)
+
+
+            main_model_instance = ServicePacketingDeliveryMainModel.objects.create(
+                user=request.user,
+                serviceModelInfo=service_instance,
+            )
+
+            return redirect('services:select_service')
+    
+    form = ServiceModelForm()
+    return render(request, "services/services.html", {
+        'form': form,
+    })
+
+def select_service(request):
+
+
+    # if request.method == 'POST':
+    #     selected_service_id = request.POST.get('selected_service')
+    #     selected_service = DeliveryService.objects.get(id=selected_service_id)
+
+    #     # Get or create the ServiceUserModel instance for the selected service
+    #     service_user_instance, created = ServiceUserModel.objects.get_or_create(user=request.user, service_model_data=selected_service)
+
+    #     # Update the existing ServicePacketingDeliveryMainModel instance or create a new one
+    #     if main_model_instance:
+    #         main_model_instance.service_data_model = service_user_instance
+    #         main_model_instance.save()
+    #     else:
+    #         main_model_instance = ServicePacketingDeliveryMainModel.objects.create(
+    #             user=request.user,
+    #             service_data_model=service_user_instance
+    #         )
+
+    #     return redirect('services:details_view', user_service_id=service_user_instance.id)
+
+
+    try:
+        service_instance = ServiceModel.objects.last()
+    except OperationalError as e:
+
+        print("Database lock error:", e)
+        service_instance = None
+
+    services = DeliveryService.objects.all()
+
+    if request.method == 'POST':
+        selected_service_id = request.POST.get('selected_service')
+        selected_service = DeliveryService.objects.get(id=selected_service_id)
+
+        user = request.user
+        user_service = ServiceUserModel(user=user, service_model_data=selected_service)
+        user_service.save()
+
+        user_service_instance = ServiceUserModel.objects.create(
+            user=request.user,
+            service_model_data=selected_service
+        )
+
+        delivery_data_model_id = None
+
+        main_model_instance = ServicePacketingDeliveryMainModel.objects.create(
+            user=request.user,
+            user_booking_data_model=None,
+            delivery_data_model_id=delivery_data_model_id,
+            service_data_model=user_service_instance,
+            serviceModelInfo=service_instance
+        )
+
+        return redirect('services:details_view', user_service.id)
+
+    # Handle the case when the form is not submitted or is invalid
+    # form = PersonCreationForm()  
+    # matching_flights = AirlineFlight.objects.none()
+
+    
+    # sort_by = request.GET.get('sort_by', 'speed')
+    # if sort_by not in ['speed', '-rating', 'price']:
+    #     sort_by = 'speed'  # Default sorting by speed
+
+    # if sort_by == 'price':
+    #     services = DeliveryService.objects.order_by('price')
+    # else:
+    #     services = DeliveryService.objects.order_by(sort_by)
+
+    
+    sort_by = request.GET.get('sort_by', 'speed')
+    if sort_by not in ['speed', '-rating', 'price']:
+        sort_by = 'speed'  # Default sorting by speed
+
+    services = DeliveryService.objects.all()
+
+    # Loop through each service to apply speed conversion based on speed_unit
+    for service in services:
+        if service.speed_unit == 'days':
+            service.converted_speed = service.speed * 24  # Convert days to hours
+        else:
+            service.converted_speed = service.speed
+
+    # Sort queryset based on the selected criteriafdfsfdfhfhjsd
+    if sort_by == 'price':
+        services = sorted(services, key=lambda x: x.price)
+    elif sort_by == '-rating':
+        services = sorted(services, key=lambda x: x.rating, reverse=True)
+    else:
+        services = sorted(services, key=lambda x: x.converted_speed)
+
+
+
+    # delivery_service = DeliveryService.objects.get(pk=delivery_service_id)
+
+    for service in services:
+        service.rating_percentage = (service.rating / 5) * 100  # Calculate rating percentage for each service
+
+    context = {
+        'services': services,
+    }
+
+
+    return render(request, 'services/select_service.html', context)
+
+def details_view(request, user_service_id=None):
+
+    service_instance = ServiceModel.objects.last()
+
+    form1 = MyDetailsModelForm()
+    form2 = ParcelDetailsModelForm()
+    form3 = usersBookingDataForm()
+
+    if request.method == "POST":
+        form1 = MyDetailsModelForm(request.POST)
+        form2 = ParcelDetailsModelForm(request.POST)
+        form3 = usersBookingDataForm(request.POST, initial={'form1': form1, 'form2': form2})
+
+        if form1.is_valid() and form2.is_valid() and form3.is_valid():
+            # my_details_instance = form1.save()
+
+            my_details_instance = form1.save(commit=False)
+            my_details_instance.user = request.user  
+            my_details_instance.save()
+
+            parcel_details_instance = form2.save()
+            booking_data_instance = form3.save(commit=False)
+            booking_data_instance.user = request.user
+            booking_data_instance.user_details_data = my_details_instance
+            booking_data_instance.parcels_details_data = parcel_details_instance
+            booking_data_instance.save()
+
+            #test code
+
+            service_user_instance = get_object_or_404(ServiceUserModel, pk=user_service_id)
+
+            # Create ServicePacketingDeliveryMainModel instance
+            main_model_instance = ServicePacketingDeliveryMainModel.objects.create(
+                user=request.user,
+                user_booking_data_model=booking_data_instance,
+                delivery_data_model=None,  # Assuming delivery_details_data is associated with booking_data_instance
+                service_data_model=service_user_instance,
+                serviceModelInfo=service_instance
+            )
+
+            return redirect('services:details_view2', main_model_instance.id)
+        else:
+#             # Form submission is invalid, display error messages
+#             # You can access form errors using form.errors and form.non_field_errors
+
+#             # Display error messages for each form
+            for field, errors in form1.errors.items():
+                for error in errors:
+                    messages.error(request, f"Form 1 Error: {error}")
+
+            for field, errors in form2.errors.items():
+                for error in errors:
+                    messages.error(request, f"Form 2 Error: {error}")
+
+            for field, errors in form3.errors.items():
+                for error in errors:
+                    messages.error(request, f"Form 3 Error: {error}")
+
+            # Optionally, you can also display non-field errors
+            for error in form1.non_field_errors():
+                messages.error(request, f"Form 1 Non-Field Error: {error}")
+
+            for error in form2.non_field_errors():
+                messages.error(request, f"Form 2 Non-Field Error: {error}")
+
+            for error in form3.non_field_errors():
+                messages.error(request, f"Form 3 Non-Field Error: {error}")
+
+            # Redirect back to the same page to display error messages
+            # You can also choose to render the form with errors without redirecting
+            return redirect('services:details_view2', main_model_instance.id)
+
+    return render(request, "services/details_view.html", {'form1': form1, 'form2': form2, 'form3': form3})
+
+
+def details_view2(request, main_model_id=None):
+
+    try:
+        service_instance = ServiceModel.objects.last()
+    except OperationalError as e:
+
+        print("Database lock error:", e)
+        service_instance = None
+        
+    main_model_instance = get_object_or_404(ServicePacketingDeliveryMainModel, pk=main_model_id)
+
+    user_info = myDetailsModel.objects.last()
+    if user_info:
+        full_name = f"{user_info.name} {user_info.surname}"
+        returnDetailsModel.objects.create(return_full_name=full_name)
+
+    form1_addr = returnDetailsForm()
+    form2_addr = deliveryDetailsForm()
+    form3_addr = deliveryGuaranteeForm()
+
+    if request.method == "POST":
+        form1_addr = returnDetailsForm(request.POST)
+        form2_addr = deliveryDetailsForm(request.POST)
+        form3_addr = deliveryGuaranteeForm(request.POST)
+
+
+        if form1_addr.is_valid() and form2_addr.is_valid() and form3_addr.is_valid():
+            return_details_instance = form1_addr.save()
+            delivery_details_instance = form2_addr.save()
+            guarantee_details_instance = form3_addr.save()
+
+            print(delivery_details_instance)
+            print(return_details_instance)
+
+            # Retrieve or create user instance
+            user = request.user
+
+            # Create delivery details data instance
+            delivery_data_instance = deliveryDetailsData.objects.create(
+                user=user,
+                return_details=return_details_instance,
+                delivery_details=delivery_details_instance,
+                guarantee_details=guarantee_details_instance
+
+            )
+
+            main_model_instance.delivery_data_model = delivery_data_instance
+            main_model_instance.save()
+
+            return redirect('services:details_summary')
+        
+        else:
+
+            for field, errors in form1_addr.errors.items():
+                for error in errors:
+                    messages.error(request, f"Form 1 Error: {error}")
+
+            for field, errors in form2_addr.errors.items():
+                for error in errors:
+                    messages.error(request, f"Form 2 Error: {error}")
+
+            for field, errors in form3_addr.errors.items():
+                for error in errors:
+                    messages.error(request, f"Form 3 Error: {error}")
+
+            
+            for error in form1_addr.non_field_errors():
+                messages.error(request, f"Form 1 Non-Field Error: {error}")
+
+            for error in form2_addr.non_field_errors():
+                messages.error(request, f"Form 2 Non-Field Error: {error}")
+
+            for error in form3_addr.non_field_errors():
+                messages.error(request, f"Form 3 Non-Field Error: {error}")
+
+            return redirect('services:details_summary')
+    
+    else:
+        form1_addr = returnDetailsForm()
+        form2_addr = deliveryDetailsForm()
+        form3_addr = deliveryGuaranteeForm()
+    
+    return render(request, "services/details_view2.html", {'form1_addr': form1_addr, 'form2_addr': form2_addr, 'form3_addr': form3_addr})
+
+
+
+def details_summary(request):
+
+    user = request.user
+
+    # recent_booking_data = usersBookingData.objects.filter(user=user).order_by('-id').first()
+    recent_service_packeting_instance = ServicePacketingDeliveryMainModel.objects.filter(user=user).order_by('-id').first()
+
+    # if recent_booking_data:
+
+    #     user_details = recent_booking_data.user_details_data
+
+    #     parcel_details = recent_booking_data.parcels_details_data
+    # else:
+    #     user_details = None
+    #     parcel_details = None
+
+    if recent_service_packeting_instance:
+        # Access the data related to this instance
+        user_booking_data = recent_service_packeting_instance.user_booking_data_model
+        delivery_data = recent_service_packeting_instance.delivery_data_model
+        service_data = recent_service_packeting_instance.service_data_model
+        serviceModelInfo = recent_service_packeting_instance.serviceModelInfo
+    else:
+        user_booking_data = None
+        delivery_data = None
+        service_data = None
+        serviceModelInfo = None
+
+    return render(request, "services/details_summary.html", {
+        # 'user_details': user_details,
+        # 'parcel_details': parcel_details,
+        'user_booking_data': user_booking_data,
+        'delivery_data': delivery_data,
+        'service_data': service_data,
+        'serviceModelInfo': serviceModelInfo,
+    })
+
+
+def orderDestination(request):
+
+    current_user = request.user
+
+    
+    last_service_model = ServiceModel.objects.filter(user=current_user).last()
+    sender_address = deliveryDetailsData.objects.filter(user=current_user).last()
+    receiver_address = deliveryDetailsData.objects.filter(user=current_user).last()
+
+
+    return render(request, 'services/orderDestination.html', {
+        'last_service_model': last_service_model,
+        'sender_address': sender_address,
+        'receiver_address': receiver_address,
+    })
+
+def successful_order(request):
+
+    user = request.user
+
+    recent_service_packeting_instance = ServicePacketingDeliveryMainModel.objects.filter(user=user).order_by('-id').first()
+
+    admin_user = User.objects.filter(is_staff=True, is_superuser=True).first()
+
+    admin_email = admin_user.email
+
+
+    if recent_service_packeting_instance:
+        # Access the data related to this instance
+        user_booking_data = recent_service_packeting_instance.user_booking_data_model
+        delivery_data = recent_service_packeting_instance.delivery_data_model
+        service_data = recent_service_packeting_instance.service_data_model
+        serviceModelInfo = recent_service_packeting_instance.serviceModelInfo
+    else:
+        user_booking_data = None
+        delivery_data = None
+        service_data = None
+        serviceModelInfo = None
+
+    # user_details = get_object_or_404(myDetailsModel, user=user)
+    user_details = myDetailsModel.objects.filter(user=user).order_by('-id').first()
+    print(user_details.email)
+    print(admin_email)
+    recipient_email = user_details.email
+
+    #This code about the email is for the client
+    subject = 'Your service is booked!'
+    message = render_to_string('services/success_email.txt', {
+
+        'user_booking_data': user_booking_data,
+        'delivery_data': delivery_data,
+        'service_data': service_data,
+        'serviceModelInfo': serviceModelInfo,
+        'user': user,
+    })
+
+    send_mail(subject, message, 'enisg1489@gmail.com', [recipient_email])
+
+
+    #This code about the email is for the admin user
+    subject = 'A user just booked a service!'
+    message = render_to_string('services/success_email_admin.txt', {
+
+        'user_booking_data': user_booking_data,
+        'delivery_data': delivery_data,
+        'service_data': service_data,
+        'serviceModelInfo': serviceModelInfo,
+        'user': user,
+    })
+
+    send_mail(subject, message, 'enisg1489@gmail.com', [admin_email])
+
+    return render(request, "services/successful_order.html")

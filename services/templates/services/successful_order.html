@@ -1,0 +1,13 @@
+<!-- track_order.html -->
+
+{% extends "core/base.html" %}
+{% block title %}Track Order{% endblock %}
+{% block content %}
+<div class="flex flex-col justify-center items-center w-full bg-green-200 p-4 my-4 rounded-md max-[426px]:p-6 max-[426px]:mt-8 max-[426px]:text-center">
+    <h1 class="text-emerald-600 text-6xl font-bold my-8 max-[321px]:text-5xl">Your order is saved</h1>
+    <p class="text-emerald-400 text-xl font-semibold my-8 max-[321px]:text-lg">The  <span class="text-emerald-600 animate-pulse">delivery</span> will take now place.</p>
+    <a href="{% url 'services:index' %}" class="my-2 mb-8 outline-none border-none text-lg px-6 py-2 font-semibold text-white bg-teal-500 rounded-lg transition-all duration-300 ease-in-out hover:bg-teal-700">
+        Go Back
+    </a>
+</div>
+{% endblock %}

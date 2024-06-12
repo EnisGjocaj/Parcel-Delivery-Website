@@ -1,0 +1,222 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script src="https://cdn.tailwindcss.com"></script>
+
+         <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+        <script src="https://api.opencagedata.com/geocode/v1/json?key=baa3dd40813940d4afb0837818a7f254"></script>
+
+         <style>
+
+            .carousel-item {
+                    display: none;
+            }
+            .carousel-item.active {
+                    display: flex;
+            }
+
+            .carousel-inner {
+                transition: transform 0.5s ease-in-out;
+            }
+
+
+            .non-visible {
+				opacity: 0;
+				transition: all 2s;
+				filter: blur(5px);
+			}
+
+			.show {
+				opacity: 1;
+				filter: blur(0);
+			}
+
+            .zoom-in {
+                transform: scale(1);
+                transition: transform 0.5s; 
+            }
+
+            .zoom-in.active {
+                transform: scale(1.1);
+            }
+
+            .grow-on-hover {
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .grow-on-hover:hover {
+                transform: scale(1.1); 
+                cursor: pointer;
+            }
+
+            /* code for icons */
+
+            .wave {
+                width: 100%;
+                overflow: hidden;
+                line-height: 0;
+            }
+
+            .wave svg {
+                position: relative;
+                display: block;
+                width: calc(103% + 1.3px);
+                height: 262px;
+            }
+
+            .wave .shape-fill {
+                fill: hsl(240, 3%, 6%);
+            }
+
+
+            @keyframes changeColor {
+                    0%, 100% { fill: #BB004B; }
+                    50% { fill: #E6E6FA; }
+            }
+
+            .color-changing-blob {
+                animation: changeColor 10s ease-in-out infinite;
+            }
+
+            #services-div {
+                background: rgb(0,0,0);
+                background: linear-gradient(127deg, rgba(0,0,0,1) 0%, rgba(28,56,164,1) 0%, rgba(5,166,199,1) 100%);
+            }
+
+            /* code for stars display */
+            svg {
+                margin-bottom: 2em;
+            }
+
+                .rating__background {
+                fill: #FFE372;
+                stroke: red;
+                stroke-width: 1;
+                height: 100%;
+                width: 100%;
+                }
+
+                .rating__value {
+                fill: #FFB94B;
+                height: 100%;
+                }
+
+
+        </style>
+
+
+    </head>
+    <body>
+
+        <header class="text-white font-bold">
+            <nav class="bg-black py-6 px-6 flex justify-center items-center border-b border-gray-400">
+                <!-- <div class="flex justify-start">
+                    <img class="w-28" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf_1NXYK0kRAM4ls4fHQMHsC6AIunpJvHgOA&usqp=CAU" />
+                </div> -->
+                <div class="w-full flex flex-row justify-center items-center text-lg space-x-24 max-[1024px]:space-x-12 max-[1024px]:text-lg max-[768px]:text-sm max-[768px]:space-x-8 max-[768px]:w-full">
+                    <a href="{% url 'core:index' %}" class="font-semibold transition-all duration-300 ease-in-out hover:text-blue-500 max-[426px]:hidden">Home</a>
+                    <a href="{% url 'about:index' %}" class="font-semibold transition-all duration-300 ease-in-out hover:text-blue-500 max-[426px]:hidden">About us</a>
+                    <a href="{% url 'userProfile:profile_showcase' %}" class="flex items-center p-2 font-semibold transition-all duration-300 ease-in-out hover:text-blue-500 group max-[426px]:hidden">
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                            <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
+                         </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">My Profile</span>
+                    </a>
+                    <a href="{% url 'services:index' %}" class="flex items-center p-2 font-semibold transition-all duration-300 ease-in-out hover:text-blue-500 group max-[426px]:hidden">
+                        <span class="flex-1 ms-3 whitespace-nowrap">My Services</span>
+                    </a>
+
+                    <span href="#" id="track_link" class="font-semibold transition-all duration-300 ease-in-out hover:text-blue-500 max-[426px]:hidden">Track a parcel</span>
+                    
+                    <a href="{% url 'core:login' %}" class="font-semibold transition-all duration-300 ease-in-out hover:text-blue-500 max-[426px]:hidden max-[768px]:whitespace-nowrap">Log in</a>
+                    <a href="{% url 'core:signup' %}" class="py-2 px-4 bg-[#800080] rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-[#BF40BF] max-[426px]:hidden max-[768px]:whitespace-nowrap">Sign up</a>
+                    <div class="flex flex-row items-center min-[426px]:hidden">
+                        <button id="nav-btn" class="bg-transparent p-8">
+                            <span class="bar bg-black block h-1 w-8 mb-1"></span>
+                            <span class="bar bg-black block h-1 w-8 mb-1"></span>
+                            <span class="bar bg-black block h-1 w-8"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        {% block content %}
+
+            <!-- <div id="sidebar" style="display: none;">
+                <form id="track_form" method="post" action="{% url 'core:track_parcel' %}">
+                    {% csrf_token %}
+                    <label for="parcel_name">Enter Parcel Name:</label>
+                    <input type="text" name="parcel_name" id="parcel_name">
+                    <button type="submit">Track</button>
+                </form>
+                <p id="destination">{{ destination }}</p>
+            </div> -->
+
+        {% endblock %}
+
+        <footer class="py-6 px-6 mt-12 bg-gray-600 text-white">
+            <div class="flex flex-col justify-center gap-4">
+                <div class="mx-2 w-full grid place-items-center">
+                    <ul class="flex flex-row font-semibold text-lg max-[768px]:text-md max-[426px]:flex-col max-[426px]:text-lg max-[426px]:text-center">
+                        <li class="mb-5 mx-6 max-[768px]:mx-4 text-hover-animation-footer hover:text-white">
+                            
+                        </li>
+                        <li class="mb-5 mx-6 max-[768px]:mx-4 text-hover-animation-footer hover:text-white">Help {{ request.user.username}}</li>
+                        <li class="mb-5 mx-6 max-[768px]:mx-4 text-hover-animation-footer hover:text-white">Lost & Found</li>
+                        <li class="mb-5 mx-6 max-[768px]:mx-4 text-hover-animation-footer hover:text-white">Lockers</li>
+                        <li class="mb-5 mx-6 max-[768px]:mx-4 text-hover-animation-footer hover:text-white">Lockers</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col justify-center items-center">
+                    <p class="w-3/4 text-white text-md font-normal text-center my-4 max-[426px]:mb-8 text-sm w-4/5">On FareCompare, you will find cheap flights for domestic and international travel. Since airlines change flight prices constantly, sign up for Fare Alerts and let FareCompare’s travel search engine monitor airline ticket prices of all major airlines, so you’ll be first in line to get the cheapest tickets.</p>
+                    <h5 class="text-center italic text-white text-sm mb-4">© Copyright 2006-2023 FareCompare.com. All rights reserved.</h5>
+                </div>
+            </div>
+        </footer>
+
+        <button id="scrollToTopButton" class="fixed bottom-8 right-8 bg-blue-500 text-white p-2 rounded-full cursor-pointer hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+        </button>
+
+        <script src="{% static 'core/zoom.js' %}"></script>
+        <script src="{% static 'core/scroll.js' %}"></script>
+        <script src="{% static 'core/gradient.js' %}"></script>
+        <script src="{% static 'core/scrollBtn.js' %}"></script>
+        <script src="{% static 'aboutUs/carousel.js' %}"></script>
+        <script src="{% static 'aboutUs/scale.js' %}"></script>
+        <script src="{% static 'core/sidebar.js' %}" defer></script>
+
+
+        <script src="{% static 'services/selectService.js' %}"></script>
+        <script src="{% static 'services/map.js' %}"></script>
+
+        
+
+        <script>
+            
+            const tween = KUTE.fromTo(
+              '#blob1',
+              { path: '#blob1' },
+              { path: '#blob2' },
+              { repeat: 999, duration: 3000, yoyo: true }
+            ).start();
+
+          </script>
+
+    </body>
+</html>

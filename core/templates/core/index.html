@@ -1,0 +1,856 @@
+{% extends "core/base.html" %}
+
+{% block title %} Main page {% endblock %}
+
+{% block content %}
+
+
+<div class="mx-2 my-8 flex justify-center items-center">
+    <div class="flex flex-row justify-center items-center bg-slate-200 w-11/12 rounded-2xl px-8 py-4 max-[1024px]:px-40 max-[1024px]:space-x-2">
+        <div class="flex flex-col justify-center mx-8 max-[1024px]:mx-2 ">
+            <h1 class="font-semibold text-4xl text-black max-[768px]:text-3xl">Custom packaging your customers will love</h1>
+            <p class="my-6 font-thin text-md text-gray-700">Explore, design and order environmentally-conscious packaging.</p>
+            <div class="flex flex-row justify-center gap-4">
+                <button class="whitespace-nowrap outline-none border-none bg-blue-500 font-bold text-white px-6 py-2 text-md transition-colors duration-300 ease-in-out hover:bg-blue-700 max-[768px]:text-sm max-[768px]:px-4">Shop now</button>
+                <button class="whitespace-nowrap box-border border-2 border-black bg-transparent font-bold text-black px-6 py-2 text-md transition-colors duration-300 ease-in-out hover:bg-blue-500 hover:text-white hover:border-transparent max-[768px]:text-sm max-[768px]:px-4">Buy wholesale</button>
+            </div>
+
+            <div class="flex flex-col justify-between items-center px-6 py-6 mt-36 space-y-6">
+                <p class="self-start text-black font-semibold text- italic">Trusted by:</p>
+                <div class="flex flex-row space-x-8 items-center">
+                    <img class="w-20" src="https://ph-prod.imgix.net/wp-content/uploads/2022/08/12162123/logo_backmarket.svg" />
+                    <img class="w-20" src="https://ph-prod.imgix.net/wp-content/uploads/2022/08/12162125/logo_google.svg" />
+                    <img class="w-20" src="https://ph-prod.imgix.net/wp-content/uploads/2022/08/12162123/logo_backmarket.svg" />
+                    
+                </div>
+            </div>
+        </div>
+        <img  class="herohome-template__image" sizes="(min-width: 950px) 1080px,
+            (min-width: 768px) 900px,
+            735px" srcset="https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=128 128w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=192 192w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=256 256w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=320 320w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=328 328w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=380 380w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=442 442w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=512 512w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=594 594w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=688 688w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=798 798w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=926 926w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=1074 1074w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=1246 1246w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=1446 1446w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=1678 1678w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=1946 1946w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=2258 2258w,
+https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=2618 2618w" src="https://ph-prod.imgix.net/wp-content/uploads/2023/09/23194601/desktop_kv_hero.png?fit=clip&amp;auto=format&amp;w=1080" decoding="sync" class="max-[1025px]:w-8">
+    </div>
+</div>
+
+
+<div class="relative px-6 py-6 mx-2 my-8 overflow-hidden">
+
+    <svg
+        class="blob-motion absolute  inset-0 w-full max-w-full opacity-40"
+        id="visual"
+        viewBox="0 0 960 540"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        style="pointer-events: none;"
+    >
+        <g transform="translate(450.7256843113689 283.4942824330989)">
+        <path
+            id="blob1"
+            d="M148.7 -134.9C193.7 -103.7 231.9 -51.9 232.4 0.6C233 53 196.1 106.1 151.1 128.6C106.1 151.1 53 143 -4.4 147.4C-61.8 151.8 -123.5 168.5 -151.2 146C-178.8 123.5 -172.4 61.8 -172.8 -0.4C-173.1 -62.5 -180.3 -124.9 -152.6 -156.1C-124.9 -187.3 -62.5 -187.1 -5.3 -181.8C51.9 -176.5 103.7 -166 148.7 -134.9"
+            fill="#BB004B"
+            class="color-changing-blob"
+        ></path>
+        </g>
+        <g transform="translate(509.54377535978017 281.49390864595887)" style="visibility: hidden">
+        <path
+            id="blob2"
+            d="M115.4 -137.9C137.9 -92.9 136.4 -46.4 133.6 -2.8C130.8 40.8 126.6 81.6 104.1 118.4C81.6 155.2 40.8 188.1 -8.4 196.5C-57.5 204.8 -115 188.7 -151 151.9C-187 115 -201.5 57.5 -190.8 10.7C-180.1 -36.1 -144.1 -72.1 -108.1 -117.1C-72.1 -162.1 -36.1 -216.1 5.2 -221.2C46.4 -226.4 92.9 -182.9 115.4 -137.9"
+            fill="#BB004B"
+        ></path>
+        </g>
+    </svg>
+    
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 900 900" class="w-full" version="1.1"><rect x="0" y="0" width="900" height="900" fill="#ffffff"/><path d="M0 164L25 188.7C50 213.3 100 262.7 150 284.8C200 307 250 302 300 285C350 268 400 239 450 251C500 263 550 316 600 336.5C650 357 700 345 750 343.8C800 342.7 850 352.3 875 357.2L900 362L900 0L875 0C850 0 800 0 750 0C700 0 650 0 600 0C550 0 500 0 450 0C400 0 350 0 300 0C250 0 200 0 150 0C100 0 50 0 25 0L0 0Z" fill="#ff0088" stroke-linecap="round" stroke-linejoin="miter"/></svg> -->
+    <div class="flex flex-col justify-center items-center px-4 py-4 overflow-hidden">
+        <div class="flex  flex-row items-center self-start mt-8 justify-center">
+            <img  class="w-[70px] mr-[-9rem]" src="https://static.vecteezy.com/system/resources/previews/021/998/933/original/hand-drawn-curved-arrow-shape-arrow-line-free-png.png"/>
+            <div class="flex flex-col items-center text-center">
+                <h1 class="font-bold text-gray-500 text-lg">#1 PACKAGING PARTNER🔥</h1>
+                <p class="w-1/2 text-gray-400 text-md">Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col text-center items-center">
+            <h1 class="text-center text-6xl font-bold my-6 text-gray-700">Your Packaging Partner!</h1>
+            <p class="text-gray-400 text-sm my-8  w-3/4">Best website for packaging and maintaining you internet post. Best website for packaging and maintaining you internet post. Best website for packaging and maintaining you internet post.</p>
+        </div>
+
+        <div class="flex flex-row justify-center items-center text-center gap-8">
+            <button class="font-bold text-white text-sm px-8 py-2 rounded-2xl bg-[#F33A6A] transition-all duration-300 hover:bg-[#E30B5C] focus:bg-[#E30B5C]">Shop now</button>
+            <button class="flex gap-1 items-center group items-center border border-1 border-[#F33A6A] text-[#F33A6A] text-sm px-8 py-2 rounded-2xl bg-white font-bold transition-all duration-300"><span>Shop now</span>
+                <svg data-v-e660a7a7="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      aria-hidden="true" role="img"
+                      class="max-[1024px]:hidden group-hover:translate-x-1 transition-transform ease duration-200" width="1em" height="1em"
+                      viewBox="0 0 256 256">
+                      <path fill="currentColor"
+                          d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z">
+                      </path>
+                  </svg>
+            </button>
+            
+            
+        </div>
+
+        <div class="w-1/2 flex justify-center items-center my-14">
+            <img  class="w-1/3" src="data:image/png;base64,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"/>
+            <!-- <img class="w-3/4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfnuNoESHIpgsIp4c7a1hfw0LJBeuTjNV2Q&usqp=CAU"/> -->
+        </div>
+
+        <div class="flex  flex-row items-center self-start mt-8 justify-center">
+            <img  class="w-[70px] mr-[-9rem]" src="https://static.vecteezy.com/system/resources/previews/021/998/933/original/hand-drawn-curved-arrow-shape-arrow-line-free-png.png"/>
+            <div class="flex flex-col items-center text-center">
+                <h1 class="font-bold text-gray-500 text-lg">#1 PACKAGING PARTNER🔥</h1>
+                <p class="w-1/2 text-gray-400 text-md">Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center mt-12">
+            <svg class="animate-bounce" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5L12.5303 4.46967C12.2374 4.17678 11.7626 4.17678 11.4697 4.46967L12 5ZM12 13L11.4697 13.5303C11.7626 13.8232 12.2374 13.8232 12.5303 13.5303L12 13ZM9.46967 6.46967C9.17678 6.76256 9.17678 7.23744 9.46967 7.53033C9.76256 7.82322 10.2374 7.82322 10.5303 7.53033L9.46967 6.46967ZM13.4697 7.53033C13.7626 7.82322 14.2374 7.82322 14.5303 7.53033C14.8232 7.23744 14.8232 6.76256 14.5303 6.46967L13.4697 7.53033ZM10.5303 10.4697C10.2374 10.1768 9.76256 10.1768 9.46967 10.4697C9.17678 10.7626 9.17678 11.2374 9.46967 11.5303L10.5303 10.4697ZM14.5303 11.5303C14.8232 11.2374 14.8232 10.7626 14.5303 10.4697C14.2374 10.1768 13.7626 10.1768 13.4697 10.4697L14.5303 11.5303ZM3.25 10V14H4.75V10H3.25ZM20.75 14V10H19.25V14H20.75ZM11.25 5V13H12.75V5H11.25ZM11.4697 4.46967L9.46967 6.46967L10.5303 7.53033L12.5303 5.53033L11.4697 4.46967ZM11.4697 5.53033L13.4697 7.53033L14.5303 6.46967L12.5303 4.46967L11.4697 5.53033ZM12.5303 12.4697L10.5303 10.4697L9.46967 11.5303L11.4697 13.5303L12.5303 12.4697ZM12.5303 13.5303L14.5303 11.5303L13.4697 10.4697L11.4697 12.4697L12.5303 13.5303ZM20.75 10C20.75 5.16751 16.8325 1.25 12 1.25V2.75C16.0041 2.75 19.25 5.99594 19.25 10H20.75ZM12 22.75C16.8325 22.75 20.75 18.8325 20.75 14H19.25C19.25 18.0041 16.0041 21.25 12 21.25V22.75ZM3.25 14C3.25 18.8325 7.16751 22.75 12 22.75V21.25C7.99594 21.25 4.75 18.0041 4.75 14H3.25ZM4.75 10C4.75 5.99594 7.99594 2.75 12 2.75V1.25C7.16751 1.25 3.25 5.16751 3.25 10H4.75Z" fill="#000000"/>
+            </svg>
+            <p class="text-gray-400 italic text-lg my-4 mb-8">Scroll down</p>
+        </div>
+    </div>
+
+    <div class="px-6 py-6 my-8">
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="font-bold text-6xl text-[#E75480] my-8 mb-8 max-[768px]:text-4xl">IMPORTANT INFORMATION</h1>
+            <p class="font-bold text-black text-xl my-2 ">Service bulletins keep you up to date with events that might affect our high service standards</p>
+            <div class="flex flex-col justify-center items-center space-y-14 w-full mx-2 px-4 py-2 my-6">
+                <div class="container mx-auto my-5">
+
+                    <div class="relative rounded-lg flex flex-col md:flex-row items-center md:shadow-xl md:h-72 mx-2">
+                        
+                        <div class="z-0 order-1 md:order-2 relative w-full md:w-2/5 h-80 md:h-full overflow-hidden rounded-lg md:rounded-none md:rounded-r-lg">
+                            <div class="absolute inset-0 w-full h-full object-fill object-center bg-blue-400 bg-opacity-30 bg-cover bg-bottom" style="background-image: url( https://images.unsplash.com/photo-1525302220185-c387a117886e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80 ); background-blend-mode: multiply;"></div>
+                            <div class="md:hidden absolute inset-0 h-full p-6 pb-6 flex flex-col-reverse justify-start items-start bg-gradient-to-b from-transparent via-transparent to-gray-900">
+                                <h3 class="w-full font-bold text-2xl text-white leading-tight mb-2">HOTEL AMANEE</h3>
+                                <h4 class="w-full text-xl text-gray-100 leading-tight">Bienvenido a</h4>
+                            </div>
+                            <svg class="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-white -ml-12" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon points="50,0 100,0 50,100 0,100" />
+                            </svg>
+                        </div>
+                
+                        <div class="z-10 order-2 md:order-1 w-full h-full md:w-3/5 max-[768px]:w-full flex items-center -mt-6 md:mt-0">
+                            <div class="p-14 md:pr-18 md:pl-14 md:py-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none">
+                                <h4 class="hidden md:block text-xl text-gray-400 max-[768px]:text-lg">A card</h4>
+                                <h3 class="hidden md:block font-bold text-2xl text-gray-700 max-[768px]:text-xl">Green Logistics</h3>
+                                <p class="text-gray-600 text-justify max-[1024px]:text-sm max-[768px]:text-xs">Sustainable business begins with sustainable supply chains. As the pioneer of green logistics, we have an unmatched portfolio of green logistics solutions. Together with our customers worldwide, we’re minimizing emissions without compromising operations. Find out what we have to offer, why we’re committed to sustainability, and how our industry is helping deliver a sustainable future.</p>
+                                <a class="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href="">
+                                    <span class="max-[768px]:text-sm">Read more</span>
+                                    <span class="text-xs ml-1">&#x279c;</span>
+                                </a>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+
+                <div class="container mx-auto my-5">
+
+                    <div class="relative rounded-lg flex flex-col md:flex-row-reverse items-center md:shadow-xl md:h-72 mx-2">
+                        
+                        <div class="z-10 order-2 md:order-1 w-full h-full md:w-3/5 flex items-center -mt-6 md:mt-0">
+                            <div class="p-14 md:pr-18 md:pl-14 md:py-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none">
+                                <h4 class="hidden md:block text-xl text-gray-400">A card</h4>
+                                <h3 class="hidden md:block font-bold text-2xl text-gray-700">Green Logistics</h3>
+                                <p class="text-gray-600 text-justify text-sm">Sustainable business begins with sustainable supply chains. As the pioneer of green logistics, we have an unmatched portfolio of green logistics solutions. Together with our customers worldwide, we’re minimizing emissions without compromising operations. Find out what we have to offer, why we’re committed to sustainability, and how our industry is helping deliver a sustainable future.</p>
+                                <a class="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href="">
+                                    <span>Read SFt6M7g86rc8yOHEpokXlyI2IPjeg1aro0XRn</span>
+                                    <span class="text-xs ml-1">&#x279c;</span>
+                                </a>
+                            </div>
+                        </div>
+                
+                        <div class="z-0 order-1 md:order-2 relative w-full md:w-2/5 h-80 md:h-full overflow-hidden rounded-lg md:rounded-none md:rounded-r-lg">
+                            <div class="absolute inset-0 w-full h-full object-fill object-center bg-blue-400 bg-opacity-30 bg-cover bg-bottom" style="background-image: url(https://www.dhl.com/content/dam/dhl/global/core/images/teaser-large-2730x868/green-logistics-street-trees.web.1365.434.jpg); background-blend-mode: multiply;"></div>
+                            <div class="md:hidden absolute inset-0 h-full p-6 pb-6 flex flex-col-reverse justify-start items-start bg-gradient-to-b from-transparent via-transparent to-gray-900">
+                                <h3 class="w-full font-bold text-2xl text-white leading-tight mb-2">HOTEL AMANEE</h3>
+                                <h4 class="w-full text-xl text-gray-100 leading-tight">Bienvenido a</h4>
+                            </div>
+                            <svg class="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-white -ml-12" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon points="0,100 50,100 50,0 0,0" />
+                            </svg>
+                        </div>
+                    
+                    </div>
+
+                    <div class="relative my-8">
+                        <div class="bg-cover bg-center h-80 md:h-96" style="background-image: url('https://www.dhl.com/content/dam/dhl/global/core/images/teaser-large-2730x868/dhl-gci-2022-cover-large.web.1365.434.jpg');">
+                            <div class="absolute inset-0 flex items-center justify-end">
+                                <div class="w-2/3 max-w-xl h-full bg-gradient-to-l from-white via-white-90 to-transparent">
+                                    <div class="flex flex-col justify-center items-center px-6 py-6">
+                                        <h1 class="font-bold text-black text-3xl my-6">DHL GLOBAL CONNECTEDNESS INDEX</h1>
+                                        <p class="text-black text-lg font-semibold my-6">Global flows show no signs of a shift from globalization to deglobalization</p>
+                                        <button class="my-6 rounded-lg outline-none border-none bg-[#E75480] text-white font-semibold text-lg px-6 py-2 transition-all duration-300 ease-in-out hover:bg-red-700 focus:bg-red-700">Find out more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full bg-[#E6E6FA] relative p-8">
+        
+        <div class="flex flex-col justify-center items-center">
+
+            <h1 class="text-6xl text-[#4d1a64] font-thin mt-12 mb-36 text-center drop-shadow">Discounts off <strong>UPS® services</strong></h1>
+            <div class="flex flex-row justify-center items-center space-x-24">
+               <div class="flex flex-col justify-center space-y-6">
+                    <div class="flex flex-row space-x-4">
+                        <button class="font-bold text-white text-sm px-8 py-2 rounded-2xl bg-[#F33A6A] transition-all duration-300 hover:bg-[#E30B5C] focus:bg-[#E30B5C]">Save</button>
+                        <h3 class="text-[#4d1a64] text-xl">time and money on shipping packagessad</h3>
+                    </div>
+    
+                    <div class="flex flex-row space-x-4">
+                        <button class="font-bold text-white text-sm px-8 py-2 rounded-2xl bg-[#F33A6A] transition-all duration-300 hover:bg-[#E30B5C] focus:bg-[#E30B5C]">Save</button>
+                        <h3 class="text-[#4d1a64] text-xl">time and money on shipping packages</h3>
+                    </div>
+               </div> 
+
+               <div class="flex flex-col justify-center space-y-6">
+                <div class="flex flex-row space-x-4">
+                    <button class="font-bold text-white text-sm px-8 py-2 rounded-2xl bg-[#F33A6A] transition-all duration-300 hover:bg-[#E30B5C] focus:bg-[#E30B5C]">Save</button>
+                    <h3 class="text-[#4d1a64] text-xl">time and money on shipping packages</h3>
+                </div>
+
+                <div class="flex flex-row space-x-4">
+                    <button class="font-bold text-white text-sm px-8 py-2 rounded-2xl bg-[#F33A6A] transition-all duration-300 hover:bg-[#E30B5C] focus:bg-[#E30B5C]">Save</button>
+                    <h3 class="text-[#4d1a64] text-xl">time and money on shipping packages</h3>
+                </div>
+           </div>
+            </div>
+            <button class="my-8  mt-16 flex items-center group items-center border border-1 border-[#F33A6A] text-[#F33A6A] text-lg px-14 py-2 rounded-2xl bg-white font-bold transition-all duration-300">Use calculator</button>
+            <p class="my-8 mt-24 text-sm text-gray-700">*Discounts off UPS daily rates. Rates are limited to shipping from the U.S only. Rates and any applicable discount are subject to change at any time without notice.</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="absolute top-16 w-40 max-[1024px]:w-24" viewBox="0 0 256 256" xml:space="preserve">
+
+            <defs>
+            </defs>
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.5065934065934016 2.4065934065934016) scale(2.81 2.81)">
+                <path d="M 50.103 90 h -8.7 C 22.378 90 6.956 69.853 6.956 45 S 22.378 0 41.403 0 l 7.194 0 L 50.103 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(228,175,24); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 44.555 1.431 H 32.839 c -1.989 0.665 -3.912 1.542 -5.745 2.637 h 11.8 C 40.704 2.987 42.593 2.094 44.555 1.431 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 33.116 8.454 H 21.315 c -0.971 0.913 -1.906 1.887 -2.798 2.924 h 11.8 C 31.21 10.341 32.145 9.367 33.116 8.454 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 26.112 17.225 H 14.311 c -0.569 0.946 -1.113 1.919 -1.623 2.924 h 11.8 C 24.999 19.144 25.543 18.171 26.112 17.225 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 21.978 25.996 H 10.178 c -0.342 0.957 -0.657 1.932 -0.948 2.924 h 11.8 C 21.321 27.928 21.637 26.953 21.978 25.996 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 19.662 34.767 h -11.8 c -0.172 0.964 -0.323 1.937 -0.446 2.924 h 11.8 C 19.339 36.704 19.491 35.731 19.662 34.767 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 18.757 45 c 0 -0.49 0.016 -0.975 0.028 -1.462 h -11.8 C 6.973 44.025 6.956 44.51 6.956 45 s 0.016 0.975 0.028 1.462 h 11.8 C 18.773 45.975 18.757 45.49 18.757 45 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 19.216 52.309 h -11.8 c 0.123 0.986 0.274 1.96 0.446 2.924 h 11.8 C 19.491 54.269 19.339 53.296 19.216 52.309 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 21.03 61.08 H 9.23 c 0.291 0.992 0.606 1.967 0.948 2.924 h 11.801 C 21.637 63.047 21.321 62.072 21.03 61.08 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 24.488 69.851 h -11.8 c 0.511 1.005 1.055 1.978 1.623 2.924 h 11.801 C 25.543 71.829 24.999 70.856 24.488 69.851 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 30.318 78.622 h -11.8 c 0.892 1.037 1.826 2.011 2.798 2.924 h 11.801 C 32.145 80.633 31.21 79.659 30.318 78.622 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <path d="M 38.256 85.554 l -11.163 0.378 c 1.856 1.109 3.804 1.994 5.819 2.662 h 11.715 C 42.41 87.851 40.278 86.828 38.256 85.554 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                <ellipse cx="48.597" cy="45" rx="34.447" ry="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,217,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) "/>
+                <ellipse cx="48.592" cy="45" rx="26.792" ry="35" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(228,175,24); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) "/>
+                <path d="M 63.493 53.266 c -0.072 -6.71 -5.217 -11.576 -11.467 -10.847 l -4.533 0.529 c -3.592 0.419 -6.548 -2.377 -6.589 -6.233 c -0.042 -3.856 2.847 -7.334 6.438 -7.753 l 8.887 -1.037 c 1.332 -0.155 2.399 -1.44 2.383 -2.87 c -0.015 -1.43 -1.107 -2.463 -2.439 -2.307 l -4.209 0.491 l -0.043 -3.986 c -0.015 -1.43 -1.107 -2.463 -2.439 -2.307 c -1.332 0.155 -2.399 1.44 -2.383 2.87 l 0.043 3.994 c -6.183 0.806 -11.132 6.81 -11.06 13.468 c 0.072 6.711 5.217 11.577 11.468 10.847 l 4.533 -0.529 c 3.592 -0.419 6.547 2.378 6.589 6.233 c 0.042 3.856 -2.846 7.333 -6.438 7.753 l -8.887 1.037 c -1.332 0.155 -2.399 1.44 -2.383 2.87 s 1.107 2.463 2.439 2.307 l 4.209 -0.491 l 0.043 3.968 c 0.015 1.43 1.107 2.463 2.439 2.307 c 1.332 -0.155 2.399 -1.44 2.383 -2.87 l -0.043 -3.976 C 58.616 65.929 63.565 59.925 63.493 53.266 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,217,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+            </g>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="absolute top-40 right-2 w-40" viewBox="0 0 256 256" xml:space="preserve">
+
+                <defs>
+                </defs>
+                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.5065934065934016 2.4065934065934016) scale(2.81 2.81)">
+                    <path d="M 50.103 90 h -8.7 C 22.378 90 6.956 69.853 6.956 45 S 22.378 0 41.403 0 l 7.194 0 L 50.103 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(228,175,24); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 44.555 1.431 H 32.839 c -1.989 0.665 -3.912 1.542 -5.745 2.637 h 11.8 C 40.704 2.987 42.593 2.094 44.555 1.431 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 33.116 8.454 H 21.315 c -0.971 0.913 -1.906 1.887 -2.798 2.924 h 11.8 C 31.21 10.341 32.145 9.367 33.116 8.454 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 26.112 17.225 H 14.311 c -0.569 0.946 -1.113 1.919 -1.623 2.924 h 11.8 C 24.999 19.144 25.543 18.171 26.112 17.225 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 21.978 25.996 H 10.178 c -0.342 0.957 -0.657 1.932 -0.948 2.924 h 11.8 C 21.321 27.928 21.637 26.953 21.978 25.996 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 19.662 34.767 h -11.8 c -0.172 0.964 -0.323 1.937 -0.446 2.924 h 11.8 C 19.339 36.704 19.491 35.731 19.662 34.767 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 18.757 45 c 0 -0.49 0.016 -0.975 0.028 -1.462 h -11.8 C 6.973 44.025 6.956 44.51 6.956 45 s 0.016 0.975 0.028 1.462 h 11.8 C 18.773 45.975 18.757 45.49 18.757 45 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 19.216 52.309 h -11.8 c 0.123 0.986 0.274 1.96 0.446 2.924 h 11.8 C 19.491 54.269 19.339 53.296 19.216 52.309 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 21.03 61.08 H 9.23 c 0.291 0.992 0.606 1.967 0.948 2.924 h 11.801 C 21.637 63.047 21.321 62.072 21.03 61.08 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 24.488 69.851 h -11.8 c 0.511 1.005 1.055 1.978 1.623 2.924 h 11.801 C 25.543 71.829 24.999 70.856 24.488 69.851 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 30.318 78.622 h -11.8 c 0.892 1.037 1.826 2.011 2.798 2.924 h 11.801 C 32.145 80.633 31.21 79.659 30.318 78.622 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <path d="M 38.256 85.554 l -11.163 0.378 c 1.856 1.109 3.804 1.994 5.819 2.662 h 11.715 C 42.41 87.851 40.278 86.828 38.256 85.554 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                    <ellipse cx="48.597" cy="45" rx="34.447" ry="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,217,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) "/>
+                    <ellipse cx="48.592" cy="45" rx="26.792" ry="35" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(228,175,24); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) "/>
+                    <path d="M 63.493 53.266 c -0.072 -6.71 -5.217 -11.576 -11.467 -10.847 l -4.533 0.529 c -3.592 0.419 -6.548 -2.377 -6.589 -6.233 c -0.042 -3.856 2.847 -7.334 6.438 -7.753 l 8.887 -1.037 c 1.332 -0.155 2.399 -1.44 2.383 -2.87 c -0.015 -1.43 -1.107 -2.463 -2.439 -2.307 l -4.209 0.491 l -0.043 -3.986 c -0.015 -1.43 -1.107 -2.463 -2.439 -2.307 c -1.332 0.155 -2.399 1.44 -2.383 2.87 l 0.043 3.994 c -6.183 0.806 -11.132 6.81 -11.06 13.468 c 0.072 6.711 5.217 11.577 11.468 10.847 l 4.533 -0.529 c 3.592 -0.419 6.547 2.378 6.589 6.233 c 0.042 3.856 -2.846 7.333 -6.438 7.753 l -8.887 1.037 c -1.332 0.155 -2.399 1.44 -2.383 2.87 s 1.107 2.463 2.439 2.307 l 4.209 -0.491 l 0.043 3.968 c 0.015 1.43 1.107 2.463 2.439 2.307 c 1.332 -0.155 2.399 -1.44 2.383 -2.87 l -0.043 -3.976 C 58.616 65.929 63.565 59.925 63.493 53.266 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,217,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                </g>
+                </svg>
+
+    </div>
+        
+    
+        <div class="mb-8">
+            <div class="w-full bg-slate-100 flex flex-col justify-center items-center p-6">
+                <h1 class="text-center text-5xl font-thin my-8">Manage your shipments and returns</h1>
+        
+                <div class="mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-16 p-4">
+                    <div class="flex flex-col items-center">
+                        <img class="rounded-full w-36" src="https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/2020/Q2/icon_courier_purple_lg_1637809911.png">
+                        <h4 class="font-bold text-gray-700 my-2 text-md">New York</h4>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img class="rounded-full w-36" src="https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/2020/Q3/icon_delivery_purple_lg_2143296207.png">
+                        <h4 class="font-bold text-gray-700 my-2 text-md">New York</h4>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img class="rounded-full w-36" src="https://www.fedex.com/content/dam/fedex-com/brand-icons/purple/retail-services.svg">
+                        <h4 class="font-bold text-gray-700 my-2 text-md">New York</h4>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img class="rounded-full w-36" src="https://www.fedex.com/content/dam/fedex/us-united-states/icons---png/icon_alert_purple_lg.png">
+                        <h4 class="font-bold text-gray-700 my-2 text-md">New York</h4>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img class="rounded-full w-36" src="https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/2020/Q3/icon_returns_purple_lg_1184917500.png">
+                        <h4 class="font-bold text-gray-700 my-2 text-md">New York</h4>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-8 w-full">
+
+        <div  class="w-full flex h-screen justify-center items-center flex-col bg-pink-200">
+            <div id="zoomContainer"
+                class="overflow-hidden transition-transform transform w-3/4 h-1/2 bg-[url('data:image/jpeg;base64,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')] bg-cover bg-center">
+                <div id="zoon-content" class="w-full h-full flex justify-start items-center mx-8">
+                        <span class="text-gray-700 w-1/2 text-center bg-white text-lg opacity-70 px-4 py-8">
+                            <div class="flex flex-col justify-center items-center text-center">
+                                <h1 class="font-thin text-2xl my-4">Level up your customer's journey</h1>
+                                <p class="font-thin my-2 mb-6">Creating exceptional experiences can mean more customer satisfaction and loyalty. Find FedEx digital intelligence tools to help you deliver at every touchpoint.</p>
+                                <button class="px-8 py-4 bg-transparent text-blue-600 font-bold text-lg rounded-2xl border-4 border-blue-600 whitespace-nowrap transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white max-[768px]:text-md max-[768px]:px-6 max-[768px]:py-2">Explore capabilities</button>
+                            </div>
+                        </span>
+                </div>
+            </div>
+        </div>        
+            
+        </div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center space-y-12">
+    
+        
+        <a href="#" class="non-visible flex items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <div class="flex-shrink-0 w-full h-full md:w-64 md:h-64 bg-cover bg-center md:rounded-l-lg" style="background-image: url('https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/POD-727x463_fy21_apac_381.jpg');"></div>
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-6 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Elevating minority-owned small businesses</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Get to know Culture With Us, one of the 2023 FedEx® Small Business Grant Contest winners. This Black-owned business works with artisans from underrepresented communities to curate virtual tastings and experiences.</p>
+            </div>
+        </a>
+        
+
+        <a href="#" class="non-visible flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <div class="flex flex-col justify-between p-4 leading-normal w-full h-full">
+                <h5 class="mb-6 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Elevating minority-owned small businesses</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Get to know Culture With Us, one of the 2023 FedEx® Small Business Grant Contest winners. This Black-owned business works with artisans from underrepresented communities to curate virtual tastings and experiences.</p>
+            </div>
+            <div class="flex-shrink-0 w-full h-full md:w-64 md:h-64 bg-cover bg-center md:rounded-l-lg" style="background-image: url('https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/POD-727x463_fy21_apac_381.jpg');"></div>
+        </a>        
+        
+
+    </div>
+
+    <div class="px-8 py-6 my-8 mt-12 mx-2 flex flex-col items-center justify-center min-h-screen">
+        <h1 class="text-5xl font-thin text-gray-900 mb-6">Set up your business for a successful 2024</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+
+            <div class="flex flex-col">
+                <img  class="mb-2" src="https://cdn.bfldr.com/I22OPSFM/at/8bgbf7tk58crfb3t3gc7kk/20180722_mk_04153_190760893_3.jpg?format=jpg&crop=1723%2C1097%2Cx22%2Cy52&width=727&height=463&auto=webp&"/>
+                <h1 class="text-3xl font-thin text-gray-800 mb-4">Fuel growth with ecommerce insights</h1>
+                <p class="text-lg font-normal text-gray-600 mb-4">So much goes into running your business. Take some time to recharge and read. Get guidance on everything from creating a returns strategy to improving sustainability.</p>
+                <h4 class="text-xl text-blue-500 hover:underline font-bold cursor-pointer">GET BUSSINESS INSIGHTS</h4>
+            </div>
+
+            <div class="flex flex-col">
+                <img  class="mb-2" src="https://www.fedex.com/content/dam/fedex/us-united-states/services/POD_OfferCustomers_727x463.jpg"/>
+                <h1 class="text-3xl font-thin text-gray-800 mb-4">Fuel growth with ecommerce insights</h1>
+                <p class="text-lg font-normal text-gray-600 mb-4">So much goes into running your business. Take some time to recharge and read. Get guidance on everything from creating a returns strategy to improving sustainability.</p>
+                <h4 class="text-xl text-blue-500 hover:underline font-bold cursor-pointer">GET BUSSINESS INSIGHTS</h4>
+            </div>
+
+            <div class="flex flex-col">
+                <img  class="mb-2" src="https://cdn.bfldr.com/I22OPSFM/at/8bgbf7tk58crfb3t3gc7kk/20180722_mk_04153_190760893_3.jpg?format=jpg&crop=1723%2C1097%2Cx22%2Cy52&width=727&height=463&auto=webp&"/>
+                <h1 class="text-3xl font-thin text-gray-800 mb-4">Fuel growth with ecommerce insights</h1>
+                <p class="text-lg font-normal text-gray-600 mb-4">So much goes into running your business. Take some time to recharge and read. Get guidance on everything from creating a returns strategy to improving sustainability.</p>
+                <h4 class="text-xl text-blue-500 hover:underline font-bold cursor-pointer">GET BUSSINESS INSIGHTS</h4>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+        <h1 class="text-5xl font-thin text-gray-900 mb-4">You didn’t love a gift.</h1>
+        <h1 class="text-5xl font-thin text-gray-900 mb-6">But you’ll love how easy it is to return.</h1>
+            <div class="flex flex-col justify-center items-center w-full px-8 py-6 mx-2 my-8 space-y-8">
+
+                <div class="flex flex-row justify-center items-center gap-8 w-3/4 px-4">
+                    <img class="w-1/4" src="https://www.fedex.com/content/dam/fedex/us-united-states/services/POD_FindTheRight_727x463.jpg"/>
+                    <div class="flex flex-col space-y-4">
+                        <h1 class="text-4xl text-gray-800 my-4">Find the right fit for your return</h1> 
+                        <p class="font-thin text-lg text-gray-700">Whether you need to print a label or already have a QR code, see step-by-step instructions. Get answers to your questions about packing and tracking your return.</p>
+                        <h4 class="text-xl text-blue-500 hover:underline font-bold cursor-pointer">GET BUSSINESS INSIGHTS</h4>
+                    </div>
+                </div>
+
+                <div class="flex flex-row justify-center items-center gap-8 w-3/4 px-4">
+                    <img class="w-1/4" src="https://www.fedex.com/content/dam/fedex/us-united-states/services/POD_FindTheRight_727x463.jpg"/>
+                    <div class="flex flex-col space-y-4">
+                        <h1 class="text-4xl text-gray-800 my-4">Find the right fit for your return</h1> 
+                        <p class="font-thin text-lg text-gray-700">Whether you need to print a label or already have a QR code, see step-by-step instructions. Get answers to your questions about packing and tracking your return.</p>
+                        <h4 class="text-xl text-blue-500 hover:underline font-bold cursor-pointer">GET BUSSINESS INSIGHTS</h4>
+                    </div>
+                </div>
+
+                <div class="flex flex-row justify-center items-center gap-8 w-3/4 px-4">
+                    <img class="w-1/4" src="https://www.fedex.com/content/dam/fedex/us-united-states/services/POD_FindTheRight_727x463.jpg"/>
+                    <div class="flex flex-col space-y-4">
+                        <h1 class="text-4xl text-gray-800 my-4">Find the right fit for your return</h1> 
+                        <p class="font-thin text-lg text-gray-700">Whether you need to print a label or already have a QR code, see step-by-step instructions. Get answers to your questions about packing and tracking your return.</p>
+                        <h4 class="text-xl text-blue-500 hover:underline font-bold cursor-pointer">GET BUSSINESS INSIGHTS</h4>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    
+    <section class="flex flex-col justify-center antialiased bg-gray-50 text-gray-600 min-h-screen p-4">
+        <div class="h-full flex flex-row justify-center items-center">
+            <!-- Card -->
+            <div class="max-w-xs mx-auto grow-on-hover">
+                <div class="relative bg-cyan-700 shadow-lg rounded-lg shadow-lg p-5 overflow-hidden">
+                    <!-- Illustration -->
+                    <svg class="absolute top-0 right-0" width="158" height="119" aria-hidden="true">
+                        <defs>
+                            <linearGradient x1="50%" y1="0%" x2="50%" y2="96.22%" id="a">
+                                <stop stop-color="#818CF8" stop-opacity=".88" offset="0%" />
+                                <stop stop-color="#818CF8" stop-opacity=".24" offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <g transform="translate(-719 -96)" stroke="url(#a)" fill="none" fill-rule="evenodd">
+                            <path d="M802.959 69.706c.987-31.014 27.104-55.35 58.333-54.356 31.23.994 55.747 26.94 54.76 57.954-.987 31.013-27.103 55.349-58.333 54.356-31.23-.994-55.747-26.94-54.76-57.954Z" />
+                            <path d="M859.16 15.329c32.617-.2 59.212 24.794 59.4 55.824.19 31.028-26.097 56.343-58.714 56.543-32.617.2-59.212-24.793-59.4-55.823-.19-31.03 26.097-56.346 58.714-56.544Z" />
+                            <path d="M857.026 15.367c34.01-1.498 62.687 22.421 64.052 53.424 1.366 31.003-25.097 57.35-59.107 58.847-34.01 1.5-62.688-22.419-64.053-53.422-1.366-31.004 25.098-57.35 59.108-58.849Z" />
+                            <path d="M854.918 15.477c35.407-2.907 66.167 19.823 68.708 50.768 2.54 30.945-24.105 58.386-59.51 61.292-35.407 2.906-66.169-19.825-68.708-50.769-2.54-30.945 24.104-58.386 59.51-61.291Z" />
+                            <path d="M852.8 15.648c36.79-4.42 69.62 17.006 73.326 47.858 3.707 30.85-23.113 59.445-59.903 63.865-36.789 4.42-69.618-17.006-73.325-47.857-3.707-30.852 23.112-59.446 59.902-63.866Z" />
+                            <path d="M850.69 15.868c38.154-6.045 73.03 13.966 77.9 44.696 4.869 30.731-22.113 60.543-60.267 66.588-38.154 6.046-73.031-13.966-77.9-44.695-4.87-30.73 22.113-60.544 60.267-66.589Z" />
+                            <path d="M848.59 16.119c39.488-7.784 76.386 10.699 82.415 41.282 6.028 30.584-21.095 61.686-60.582 69.47-39.487 7.785-76.385-10.698-82.414-41.282-6.028-30.583 21.095-61.686 60.582-69.47Z" />
+                            <path d="M846.5 16.415c40.78-9.629 79.663 7.223 86.845 37.641 7.182 30.418-20.054 62.882-60.836 72.511-40.78 9.63-79.663-7.222-86.845-37.639-7.183-30.418 20.054-62.883 60.835-72.513Z" />
+                            <path d="M844.42 16.764c42.027-11.578 82.85 3.548 91.18 33.786 8.33 30.238-18.986 64.136-61.013 75.714-42.028 11.58-82.85-3.547-91.18-33.786-8.332-30.237 18.986-64.136 61.013-75.714Z" />
+                            <path d="M842.337 17.103c43.206-13.639 85.917-.342 95.4 29.697 9.48 30.04-17.858 65.449-61.064 79.086-43.205 13.638-85.917.34-95.399-29.698-9.48-30.04 17.857-65.448 61.063-79.085Z" />
+                            <path d="M840.262 17.483c44.315-15.792 88.857-4.409 99.49 25.424 10.632 29.835-16.674 66.822-60.989 82.614-44.314 15.792-88.857 4.41-99.489-25.425-10.632-29.833 16.674-66.82 60.988-82.613Z" />
+                            <path d="M838.159 17.875c45.333-18.039 91.636-8.653 103.42 20.963 11.786 29.616-15.411 68.248-60.744 86.287-45.333 18.04-91.636 8.653-103.421-20.963-11.785-29.617 15.412-68.248 60.745-86.287Z" />
+                            <path d="M836.07 18.28C882.332-2.098 930.33 5.214 943.278 34.61c12.948 29.396-14.06 69.744-60.321 90.12-46.262 20.376-94.261 13.065-107.208-16.332-12.948-29.395 14.059-69.744 60.32-90.12Z" />
+                            <path d="M833.941 18.697C881.02-4.093 930.63 1.079 944.748 30.246c14.12 29.167-12.6 71.285-59.679 94.075-47.079 22.788-96.689 17.618-110.807-11.55-14.119-29.167 12.601-71.285 59.68-94.074Z" />
+                            <path d="M831.784 19.112c47.775-25.274 98.913-22.307 114.22 6.626 15.305 28.934-11.016 72.878-58.79 98.151-47.776 25.275-98.914 22.308-114.22-6.626-15.307-28.933 11.015-72.877 58.79-98.15Z" />
+                            <path d="M829.594 19.545C877.94-8.273 930.518-7.561 947.03 21.135c16.512 28.697-9.295 74.51-57.64 102.329-48.347 27.818-100.925 27.106-117.437-1.59s9.295-74.511 57.641-102.33Z" />
+                            <path d="M827.381 19.982c48.786-30.418 102.72-32.005 120.463-3.546 17.745 28.46-7.42 76.19-56.205 106.607-48.785 30.418-102.719 32.004-120.463 3.545-17.745-28.459 7.42-76.189 56.205-106.606Z" />
+                            <path d="M825.097 20.42c49.073-33.056 104.261-36.981 123.266-8.768 19.006 28.214-5.368 77.884-54.44 110.94-49.073 33.057-104.262 36.98-123.267 8.767-19.005-28.213 5.37-77.883 54.441-110.94Z" />
+                            <path d="M822.745 20.865c49.202-35.722 105.546-42.014 125.847-14.052 20.3 27.961-3.129 79.587-52.331 115.31-49.204 35.721-105.547 42.013-125.847 14.052-20.301-27.962 3.129-79.588 52.331-115.31Z" />
+                            <path d="M820.333 21.349c49.18-38.398 106.585-47.066 128.217-19.36 21.632 27.707-.7 81.295-49.88 119.693-49.18 38.398-106.585 47.065-128.217 19.359-21.632-27.706.7-81.294 49.88-119.692Z" />
+                            <path d="M817.836 21.827C866.822-19.256 925.189-30.318 948.2-2.879c23.013 27.44 1.957 82.988-47.03 124.071-48.984 41.084-107.351 52.146-130.364 24.706-23.012-27.438-1.957-82.987 47.029-124.07Z" />
+                            <path d="M815.25 22.327C863.87-21.434 923.1-34.891 947.544-7.733c24.446 27.16 4.847 84.653-43.774 128.414-48.62 43.76-107.852 57.218-132.296 30.059-24.445-27.16-4.847-84.652 43.774-128.413Z" />
+                            <path d="M812.554 22.866c48.081-46.41 108.08-62.255 134.01-35.391 25.93 26.865 7.974 86.265-40.106 132.675-48.08 46.41-108.079 62.255-134.009 35.39-25.93-26.864-7.976-86.264 40.105-132.674Z" />
+                            <path d="M809.746 23.436C857.107-25.59 917.78-43.81 945.26-17.261c27.48 26.548 11.362 87.811-35.997 136.837C861.9 168.6 801.229 186.82 773.749 160.272c-27.48-26.548-11.364-87.813 35.997-136.837Z" />
+                            <path d="M806.816 24.042C853.278-27.55 914.533-48.13 943.634-21.923c29.099 26.206 15.026 89.275-31.436 140.867-46.462 51.593-107.717 72.172-136.818 45.966-29.1-26.206-15.026-89.276 31.436-140.868Z" />
+                            <path d="M803.75 24.729c45.389-54.088 107.145-76.99 137.935-51.152 30.79 25.838 18.955 90.63-26.434 144.719-45.39 54.089-107.145 76.99-137.935 51.152-30.79-25.838-18.955-90.631 26.434-144.72Z" />
+                            <path d="M800.547 25.454c44.137-56.52 106.318-81.724 138.885-56.293 32.567 25.431 23.187 91.868-20.95 148.388-44.137 56.522-106.317 81.725-138.884 56.293-32.567-25.43-23.188-91.867 20.949-148.388Z" />
+                            <path d="M797.176 26.272c42.708-58.86 105.237-86.324 139.663-61.345 34.426 24.98 27.712 92.944-14.996 151.803-42.708 58.86-105.237 86.325-139.663 61.345-34.426-24.98-27.712-92.944 14.996-151.803Z" />
+                            <path d="M793.647 27.183c41.113-61.1 103.933-90.787 140.31-66.309 36.379 24.478 32.54 93.853-8.573 154.953-41.114 61.1-103.933 90.788-140.311 66.309-36.38-24.478-32.54-93.853 8.574-154.953Z" />
+                            <path d="M789.932 28.207c39.35-63.227 102.4-95.095 140.826-71.18 38.425 23.914 37.674 94.556-1.677 157.784-39.35 63.226-102.4 95.095-140.825 71.18-38.426-23.916-37.675-94.559 1.676-157.785Z" />
+                            <path d="M786.041 29.348c37.433-65.24 100.673-99.251 141.251-75.97 40.578 23.284 43.126 95.045 5.694 160.284-37.434 65.24-100.674 99.252-141.25 75.969-40.579-23.282-43.128-95.044-5.695-160.283Z" />
+                            <path d="M781.942 30.642c35.36-67.116 98.748-103.231 141.581-80.666 42.832 22.566 48.891 95.27 13.53 162.387-35.36 67.115-98.748 103.231-141.58 80.666-42.834-22.567-48.89-95.27-13.53-162.387Z" />
+                            <path d="M777.66 32.101c33.156-68.862 96.675-107.044 141.876-85.282 45.2 21.762 54.964 95.228 21.81 164.091-33.155 68.862-96.675 107.044-141.875 85.282s-54.965-95.228-21.81-164.091Z" />
+                            <path d="M773.17 33.748c30.818-70.465 94.454-110.685 142.133-89.832 47.681 20.853 61.35 94.882 30.533 165.347-30.819 70.465-94.454 110.684-142.134 89.832-47.68-20.853-61.35-94.881-30.532-165.347Z" />
+                            <path d="M768.479 35.603c28.366-71.924 92.118-114.155 142.395-94.326 50.277 19.828 68.04 94.208 39.674 166.132-28.366 71.923-92.12 114.155-142.396 94.326-50.277-19.829-68.04-94.209-39.673-166.132Z" />
+                            <path d="M763.562 37.694c25.8-73.23 89.67-117.46 142.657-98.791 52.99 18.668 75.03 93.166 49.23 166.395-25.8 73.229-89.67 117.46-142.658 98.79-52.988-18.667-75.028-93.165-49.229-166.394Z" />
+                            <path d="M758.443 40.06C781.587-34.316 845.59-80.532 901.399-63.166c55.809 17.367 82.29 91.739 59.147 166.115-23.144 74.377-87.147 120.593-142.957 103.227-55.81-17.365-82.29-91.738-59.146-166.115Z" />
+                            <path d="M753.137 42.71c20.414-75.375 84.585-123.582 143.331-107.672 58.745 15.909 89.82 89.91 69.405 165.287-20.414 75.376-84.585 123.583-143.33 107.673-58.746-15.91-89.82-89.911-69.406-165.287Z" />
+                            <path d="M747.614 45.657c17.603-76.232 81.97-126.464 143.766-112.194 61.798 14.27 97.624 87.636 80.02 163.869-17.602 76.233-81.97 126.464-143.765 112.194-61.797-14.27-97.624-87.636-80.021-163.87Z" />
+                            <path d="M741.91 48.97c14.742-76.928 79.338-129.203 144.278-116.758 64.942 12.444 105.636 84.896 90.894 161.824-14.742 76.93-79.338 129.205-144.278 116.76-64.94-12.444-105.636-84.896-90.894-161.825Z" />
+                            <path d="M736.052 52.645c11.844-77.487 76.72-131.854 144.903-121.431C949.138-58.364 994.81 12.9 982.965 90.388c-11.845 77.487-76.72 131.853-144.903 121.43-68.183-10.421-113.855-81.686-102.01-159.173Z" />
+                            <path d="M730.013 56.711c8.9-77.907 74.086-134.44 145.597-126.27 71.509 8.168 122.265 77.947 113.365 155.854-8.9 77.908-74.086 134.442-145.596 126.273-71.511-8.17-122.266-77.949-113.366-155.857Z" />
+                            <path d="M723.862 61.196c5.945-78.2 71.49-136.977 146.403-131.282 74.91 5.695 130.818 73.705 124.874 151.905-5.944 78.2-71.491 136.976-146.402 131.282-74.912-5.696-130.82-73.705-124.875-151.905Z" />
+                            <path d="M859.505-70.5c78.428 0 142.005 63.578 142.005 142.005 0 78.428-63.577 142.005-142.005 142.005-78.427 0-142.005-63.577-142.005-142.005C717.5-6.922 781.078-70.5 859.505-70.5Z" />
+                        </g>
+                    </svg>
+                    <!-- Card content -->
+                    <div class="relative pt-[6.25rem] pb-14">
+                        <div class="text-xs font-bold uppercase text-green-400 tracking-widest mb-2">Featured app</div>
+                        <h3 class="text-2xl font-extrabold text-indigo-50 leading-snug mb-2">Were rated great by the users</h3>
+                        <p class="text-indigo-200">Lorem ipsum dolor sit amet, consecte adipiscing elit sed do eiusmod.</p>
+                    </div>
+                    <!-- Card footer -->
+                    <!-- <div class="relative text-right">
+                        <a class="inline-flex w-11 h-11 justify-center items-center bg-green-400 hover:bg-green-300 text-pink-50 hover:text-white rounded-full transition duration-150" href="#0"><span class="sr-only">Read more</span> <span class="font-bold -mt-px">-></span></a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="max-w-xs mx-auto grow-on-hover">
+                <div class="relative bg-indigo-700 shadow-lg rounded-lg shadow-lg p-5 overflow-hidden">
+                    <!-- Illustration -->
+                    <svg class="absolute top-0 right-0" width="158" height="119" aria-hidden="true">
+                        <defs>
+                            <linearGradient x1="50%" y1="0%" x2="50%" y2="96.22%" id="a">
+                                <stop stop-color="#818CF8" stop-opacity=".88" offset="0%" />
+                                <stop stop-color="#818CF8" stop-opacity=".24" offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <g transform="translate(-719 -96)" stroke="url(#a)" fill="none" fill-rule="evenodd">
+                            <path d="M802.959 69.706c.987-31.014 27.104-55.35 58.333-54.356 31.23.994 55.747 26.94 54.76 57.954-.987 31.013-27.103 55.349-58.333 54.356-31.23-.994-55.747-26.94-54.76-57.954Z" />
+                            <path d="M859.16 15.329c32.617-.2 59.212 24.794 59.4 55.824.19 31.028-26.097 56.343-58.714 56.543-32.617.2-59.212-24.793-59.4-55.823-.19-31.03 26.097-56.346 58.714-56.544Z" />
+                            <path d="M857.026 15.367c34.01-1.498 62.687 22.421 64.052 53.424 1.366 31.003-25.097 57.35-59.107 58.847-34.01 1.5-62.688-22.419-64.053-53.422-1.366-31.004 25.098-57.35 59.108-58.849Z" />
+                            <path d="M854.918 15.477c35.407-2.907 66.167 19.823 68.708 50.768 2.54 30.945-24.105 58.386-59.51 61.292-35.407 2.906-66.169-19.825-68.708-50.769-2.54-30.945 24.104-58.386 59.51-61.291Z" />
+                            <path d="M852.8 15.648c36.79-4.42 69.62 17.006 73.326 47.858 3.707 30.85-23.113 59.445-59.903 63.865-36.789 4.42-69.618-17.006-73.325-47.857-3.707-30.852 23.112-59.446 59.902-63.866Z" />
+                            <path d="M850.69 15.868c38.154-6.045 73.03 13.966 77.9 44.696 4.869 30.731-22.113 60.543-60.267 66.588-38.154 6.046-73.031-13.966-77.9-44.695-4.87-30.73 22.113-60.544 60.267-66.589Z" />
+                            <path d="M848.59 16.119c39.488-7.784 76.386 10.699 82.415 41.282 6.028 30.584-21.095 61.686-60.582 69.47-39.487 7.785-76.385-10.698-82.414-41.282-6.028-30.583 21.095-61.686 60.582-69.47Z" />
+                            <path d="M846.5 16.415c40.78-9.629 79.663 7.223 86.845 37.641 7.182 30.418-20.054 62.882-60.836 72.511-40.78 9.63-79.663-7.222-86.845-37.639-7.183-30.418 20.054-62.883 60.835-72.513Z" />
+                            <path d="M844.42 16.764c42.027-11.578 82.85 3.548 91.18 33.786 8.33 30.238-18.986 64.136-61.013 75.714-42.028 11.58-82.85-3.547-91.18-33.786-8.332-30.237 18.986-64.136 61.013-75.714Z" />
+                            <path d="M842.337 17.103c43.206-13.639 85.917-.342 95.4 29.697 9.48 30.04-17.858 65.449-61.064 79.086-43.205 13.638-85.917.34-95.399-29.698-9.48-30.04 17.857-65.448 61.063-79.085Z" />
+                            <path d="M840.262 17.483c44.315-15.792 88.857-4.409 99.49 25.424 10.632 29.835-16.674 66.822-60.989 82.614-44.314 15.792-88.857 4.41-99.489-25.425-10.632-29.833 16.674-66.82 60.988-82.613Z" />
+                            <path d="M838.159 17.875c45.333-18.039 91.636-8.653 103.42 20.963 11.786 29.616-15.411 68.248-60.744 86.287-45.333 18.04-91.636 8.653-103.421-20.963-11.785-29.617 15.412-68.248 60.745-86.287Z" />
+                            <path d="M836.07 18.28C882.332-2.098 930.33 5.214 943.278 34.61c12.948 29.396-14.06 69.744-60.321 90.12-46.262 20.376-94.261 13.065-107.208-16.332-12.948-29.395 14.059-69.744 60.32-90.12Z" />
+                            <path d="M833.941 18.697C881.02-4.093 930.63 1.079 944.748 30.246c14.12 29.167-12.6 71.285-59.679 94.075-47.079 22.788-96.689 17.618-110.807-11.55-14.119-29.167 12.601-71.285 59.68-94.074Z" />
+                            <path d="M831.784 19.112c47.775-25.274 98.913-22.307 114.22 6.626 15.305 28.934-11.016 72.878-58.79 98.151-47.776 25.275-98.914 22.308-114.22-6.626-15.307-28.933 11.015-72.877 58.79-98.15Z" />
+                            <path d="M829.594 19.545C877.94-8.273 930.518-7.561 947.03 21.135c16.512 28.697-9.295 74.51-57.64 102.329-48.347 27.818-100.925 27.106-117.437-1.59s9.295-74.511 57.641-102.33Z" />
+                            <path d="M827.381 19.982c48.786-30.418 102.72-32.005 120.463-3.546 17.745 28.46-7.42 76.19-56.205 106.607-48.785 30.418-102.719 32.004-120.463 3.545-17.745-28.459 7.42-76.189 56.205-106.606Z" />
+                            <path d="M825.097 20.42c49.073-33.056 104.261-36.981 123.266-8.768 19.006 28.214-5.368 77.884-54.44 110.94-49.073 33.057-104.262 36.98-123.267 8.767-19.005-28.213 5.37-77.883 54.441-110.94Z" />
+                            <path d="M822.745 20.865c49.202-35.722 105.546-42.014 125.847-14.052 20.3 27.961-3.129 79.587-52.331 115.31-49.204 35.721-105.547 42.013-125.847 14.052-20.301-27.962 3.129-79.588 52.331-115.31Z" />
+                            <path d="M820.333 21.349c49.18-38.398 106.585-47.066 128.217-19.36 21.632 27.707-.7 81.295-49.88 119.693-49.18 38.398-106.585 47.065-128.217 19.359-21.632-27.706.7-81.294 49.88-119.692Z" />
+                            <path d="M817.836 21.827C866.822-19.256 925.189-30.318 948.2-2.879c23.013 27.44 1.957 82.988-47.03 124.071-48.984 41.084-107.351 52.146-130.364 24.706-23.012-27.438-1.957-82.987 47.029-124.07Z" />
+                            <path d="M815.25 22.327C863.87-21.434 923.1-34.891 947.544-7.733c24.446 27.16 4.847 84.653-43.774 128.414-48.62 43.76-107.852 57.218-132.296 30.059-24.445-27.16-4.847-84.652 43.774-128.413Z" />
+                            <path d="M812.554 22.866c48.081-46.41 108.08-62.255 134.01-35.391 25.93 26.865 7.974 86.265-40.106 132.675-48.08 46.41-108.079 62.255-134.009 35.39-25.93-26.864-7.976-86.264 40.105-132.674Z" />
+                            <path d="M809.746 23.436C857.107-25.59 917.78-43.81 945.26-17.261c27.48 26.548 11.362 87.811-35.997 136.837C861.9 168.6 801.229 186.82 773.749 160.272c-27.48-26.548-11.364-87.813 35.997-136.837Z" />
+                            <path d="M806.816 24.042C853.278-27.55 914.533-48.13 943.634-21.923c29.099 26.206 15.026 89.275-31.436 140.867-46.462 51.593-107.717 72.172-136.818 45.966-29.1-26.206-15.026-89.276 31.436-140.868Z" />
+                            <path d="M803.75 24.729c45.389-54.088 107.145-76.99 137.935-51.152 30.79 25.838 18.955 90.63-26.434 144.719-45.39 54.089-107.145 76.99-137.935 51.152-30.79-25.838-18.955-90.631 26.434-144.72Z" />
+                            <path d="M800.547 25.454c44.137-56.52 106.318-81.724 138.885-56.293 32.567 25.431 23.187 91.868-20.95 148.388-44.137 56.522-106.317 81.725-138.884 56.293-32.567-25.43-23.188-91.867 20.949-148.388Z" />
+                            <path d="M797.176 26.272c42.708-58.86 105.237-86.324 139.663-61.345 34.426 24.98 27.712 92.944-14.996 151.803-42.708 58.86-105.237 86.325-139.663 61.345-34.426-24.98-27.712-92.944 14.996-151.803Z" />
+                            <path d="M793.647 27.183c41.113-61.1 103.933-90.787 140.31-66.309 36.379 24.478 32.54 93.853-8.573 154.953-41.114 61.1-103.933 90.788-140.311 66.309-36.38-24.478-32.54-93.853 8.574-154.953Z" />
+                            <path d="M789.932 28.207c39.35-63.227 102.4-95.095 140.826-71.18 38.425 23.914 37.674 94.556-1.677 157.784-39.35 63.226-102.4 95.095-140.825 71.18-38.426-23.916-37.675-94.559 1.676-157.785Z" />
+                            <path d="M786.041 29.348c37.433-65.24 100.673-99.251 141.251-75.97 40.578 23.284 43.126 95.045 5.694 160.284-37.434 65.24-100.674 99.252-141.25 75.969-40.579-23.282-43.128-95.044-5.695-160.283Z" />
+                            <path d="M781.942 30.642c35.36-67.116 98.748-103.231 141.581-80.666 42.832 22.566 48.891 95.27 13.53 162.387-35.36 67.115-98.748 103.231-141.58 80.666-42.834-22.567-48.89-95.27-13.53-162.387Z" />
+                            <path d="M777.66 32.101c33.156-68.862 96.675-107.044 141.876-85.282 45.2 21.762 54.964 95.228 21.81 164.091-33.155 68.862-96.675 107.044-141.875 85.282s-54.965-95.228-21.81-164.091Z" />
+                            <path d="M773.17 33.748c30.818-70.465 94.454-110.685 142.133-89.832 47.681 20.853 61.35 94.882 30.533 165.347-30.819 70.465-94.454 110.684-142.134 89.832-47.68-20.853-61.35-94.881-30.532-165.347Z" />
+                            <path d="M768.479 35.603c28.366-71.924 92.118-114.155 142.395-94.326 50.277 19.828 68.04 94.208 39.674 166.132-28.366 71.923-92.12 114.155-142.396 94.326-50.277-19.829-68.04-94.209-39.673-166.132Z" />
+                            <path d="M763.562 37.694c25.8-73.23 89.67-117.46 142.657-98.791 52.99 18.668 75.03 93.166 49.23 166.395-25.8 73.229-89.67 117.46-142.658 98.79-52.988-18.667-75.028-93.165-49.229-166.394Z" />
+                            <path d="M758.443 40.06C781.587-34.316 845.59-80.532 901.399-63.166c55.809 17.367 82.29 91.739 59.147 166.115-23.144 74.377-87.147 120.593-142.957 103.227-55.81-17.365-82.29-91.738-59.146-166.115Z" />
+                            <path d="M753.137 42.71c20.414-75.375 84.585-123.582 143.331-107.672 58.745 15.909 89.82 89.91 69.405 165.287-20.414 75.376-84.585 123.583-143.33 107.673-58.746-15.91-89.82-89.911-69.406-165.287Z" />
+                            <path d="M747.614 45.657c17.603-76.232 81.97-126.464 143.766-112.194 61.798 14.27 97.624 87.636 80.02 163.869-17.602 76.233-81.97 126.464-143.765 112.194-61.797-14.27-97.624-87.636-80.021-163.87Z" />
+                            <path d="M741.91 48.97c14.742-76.928 79.338-129.203 144.278-116.758 64.942 12.444 105.636 84.896 90.894 161.824-14.742 76.93-79.338 129.205-144.278 116.76-64.94-12.444-105.636-84.896-90.894-161.825Z" />
+                            <path d="M736.052 52.645c11.844-77.487 76.72-131.854 144.903-121.431C949.138-58.364 994.81 12.9 982.965 90.388c-11.845 77.487-76.72 131.853-144.903 121.43-68.183-10.421-113.855-81.686-102.01-159.173Z" />
+                            <path d="M730.013 56.711c8.9-77.907 74.086-134.44 145.597-126.27 71.509 8.168 122.265 77.947 113.365 155.854-8.9 77.908-74.086 134.442-145.596 126.273-71.511-8.17-122.266-77.949-113.366-155.857Z" />
+                            <path d="M723.862 61.196c5.945-78.2 71.49-136.977 146.403-131.282 74.91 5.695 130.818 73.705 124.874 151.905-5.944 78.2-71.491 136.976-146.402 131.282-74.912-5.696-130.82-73.705-124.875-151.905Z" />
+                            <path d="M859.505-70.5c78.428 0 142.005 63.578 142.005 142.005 0 78.428-63.577 142.005-142.005 142.005-78.427 0-142.005-63.577-142.005-142.005C717.5-6.922 781.078-70.5 859.505-70.5Z" />
+                        </g>
+                    </svg>
+                    <!-- Card content -->
+                    <div class="relative pt-[6.25rem] pb-14">
+                        <div class="text-xs font-bold uppercase text-green-400 tracking-widest mb-2">Featured app</div>
+                        <h3 class="text-2xl font-extrabold text-indigo-50 leading-snug mb-2">Send sold Ebay items quickly.</h3>
+                        <p class="text-indigo-200">Lorem ipsum dolor sit amet, consecte adipiscing elit sed do eiusmod.</p>
+                    </div>
+                    <!-- Card footer -->
+                    <div class="relative text-right">
+                        <a class="inline-flex w-11 h-11 justify-center items-center bg-green-400 hover:bg-green-300 text-pink-50 hover:text-white rounded-full transition duration-150" href="#0"><span class="sr-only">Read more</span> <span class="font-bold -mt-px">-></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-xs mx-auto grow-on-hover">
+                <div class="relative bg-teal-500 shadow-lg rounded-lg shadow-lg p-5 overflow-hidden">
+                    <!-- Illustration -->
+                    <svg class="absolute top-0 right-0" width="158" height="119" aria-hidden="true">
+                        <defs>
+                            <linearGradient x1="50%" y1="0%" x2="50%" y2="96.22%" id="a">
+                                <stop stop-color="#818CF8" stop-opacity=".88" offset="0%" />
+                                <stop stop-color="#818CF8" stop-opacity=".24" offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <g transform="translate(-719 -96)" stroke="url(#a)" fill="none" fill-rule="evenodd">
+                            <path d="M802.959 69.706c.987-31.014 27.104-55.35 58.333-54.356 31.23.994 55.747 26.94 54.76 57.954-.987 31.013-27.103 55.349-58.333 54.356-31.23-.994-55.747-26.94-54.76-57.954Z" />
+                            <path d="M859.16 15.329c32.617-.2 59.212 24.794 59.4 55.824.19 31.028-26.097 56.343-58.714 56.543-32.617.2-59.212-24.793-59.4-55.823-.19-31.03 26.097-56.346 58.714-56.544Z" />
+                            <path d="M857.026 15.367c34.01-1.498 62.687 22.421 64.052 53.424 1.366 31.003-25.097 57.35-59.107 58.847-34.01 1.5-62.688-22.419-64.053-53.422-1.366-31.004 25.098-57.35 59.108-58.849Z" />
+                            <path d="M854.918 15.477c35.407-2.907 66.167 19.823 68.708 50.768 2.54 30.945-24.105 58.386-59.51 61.292-35.407 2.906-66.169-19.825-68.708-50.769-2.54-30.945 24.104-58.386 59.51-61.291Z" />
+                            <path d="M852.8 15.648c36.79-4.42 69.62 17.006 73.326 47.858 3.707 30.85-23.113 59.445-59.903 63.865-36.789 4.42-69.618-17.006-73.325-47.857-3.707-30.852 23.112-59.446 59.902-63.866Z" />
+                            <path d="M850.69 15.868c38.154-6.045 73.03 13.966 77.9 44.696 4.869 30.731-22.113 60.543-60.267 66.588-38.154 6.046-73.031-13.966-77.9-44.695-4.87-30.73 22.113-60.544 60.267-66.589Z" />
+                            <path d="M848.59 16.119c39.488-7.784 76.386 10.699 82.415 41.282 6.028 30.584-21.095 61.686-60.582 69.47-39.487 7.785-76.385-10.698-82.414-41.282-6.028-30.583 21.095-61.686 60.582-69.47Z" />
+                            <path d="M846.5 16.415c40.78-9.629 79.663 7.223 86.845 37.641 7.182 30.418-20.054 62.882-60.836 72.511-40.78 9.63-79.663-7.222-86.845-37.639-7.183-30.418 20.054-62.883 60.835-72.513Z" />
+                            <path d="M844.42 16.764c42.027-11.578 82.85 3.548 91.18 33.786 8.33 30.238-18.986 64.136-61.013 75.714-42.028 11.58-82.85-3.547-91.18-33.786-8.332-30.237 18.986-64.136 61.013-75.714Z" />
+                            <path d="M842.337 17.103c43.206-13.639 85.917-.342 95.4 29.697 9.48 30.04-17.858 65.449-61.064 79.086-43.205 13.638-85.917.34-95.399-29.698-9.48-30.04 17.857-65.448 61.063-79.085Z" />
+                            <path d="M840.262 17.483c44.315-15.792 88.857-4.409 99.49 25.424 10.632 29.835-16.674 66.822-60.989 82.614-44.314 15.792-88.857 4.41-99.489-25.425-10.632-29.833 16.674-66.82 60.988-82.613Z" />
+                            <path d="M838.159 17.875c45.333-18.039 91.636-8.653 103.42 20.963 11.786 29.616-15.411 68.248-60.744 86.287-45.333 18.04-91.636 8.653-103.421-20.963-11.785-29.617 15.412-68.248 60.745-86.287Z" />
+                            <path d="M836.07 18.28C882.332-2.098 930.33 5.214 943.278 34.61c12.948 29.396-14.06 69.744-60.321 90.12-46.262 20.376-94.261 13.065-107.208-16.332-12.948-29.395 14.059-69.744 60.32-90.12Z" />
+                            <path d="M833.941 18.697C881.02-4.093 930.63 1.079 944.748 30.246c14.12 29.167-12.6 71.285-59.679 94.075-47.079 22.788-96.689 17.618-110.807-11.55-14.119-29.167 12.601-71.285 59.68-94.074Z" />
+                            <path d="M831.784 19.112c47.775-25.274 98.913-22.307 114.22 6.626 15.305 28.934-11.016 72.878-58.79 98.151-47.776 25.275-98.914 22.308-114.22-6.626-15.307-28.933 11.015-72.877 58.79-98.15Z" />
+                            <path d="M829.594 19.545C877.94-8.273 930.518-7.561 947.03 21.135c16.512 28.697-9.295 74.51-57.64 102.329-48.347 27.818-100.925 27.106-117.437-1.59s9.295-74.511 57.641-102.33Z" />
+                            <path d="M827.381 19.982c48.786-30.418 102.72-32.005 120.463-3.546 17.745 28.46-7.42 76.19-56.205 106.607-48.785 30.418-102.719 32.004-120.463 3.545-17.745-28.459 7.42-76.189 56.205-106.606Z" />
+                            <path d="M825.097 20.42c49.073-33.056 104.261-36.981 123.266-8.768 19.006 28.214-5.368 77.884-54.44 110.94-49.073 33.057-104.262 36.98-123.267 8.767-19.005-28.213 5.37-77.883 54.441-110.94Z" />
+                            <path d="M822.745 20.865c49.202-35.722 105.546-42.014 125.847-14.052 20.3 27.961-3.129 79.587-52.331 115.31-49.204 35.721-105.547 42.013-125.847 14.052-20.301-27.962 3.129-79.588 52.331-115.31Z" />
+                            <path d="M820.333 21.349c49.18-38.398 106.585-47.066 128.217-19.36 21.632 27.707-.7 81.295-49.88 119.693-49.18 38.398-106.585 47.065-128.217 19.359-21.632-27.706.7-81.294 49.88-119.692Z" />
+                            <path d="M817.836 21.827C866.822-19.256 925.189-30.318 948.2-2.879c23.013 27.44 1.957 82.988-47.03 124.071-48.984 41.084-107.351 52.146-130.364 24.706-23.012-27.438-1.957-82.987 47.029-124.07Z" />
+                            <path d="M815.25 22.327C863.87-21.434 923.1-34.891 947.544-7.733c24.446 27.16 4.847 84.653-43.774 128.414-48.62 43.76-107.852 57.218-132.296 30.059-24.445-27.16-4.847-84.652 43.774-128.413Z" />
+                            <path d="M812.554 22.866c48.081-46.41 108.08-62.255 134.01-35.391 25.93 26.865 7.974 86.265-40.106 132.675-48.08 46.41-108.079 62.255-134.009 35.39-25.93-26.864-7.976-86.264 40.105-132.674Z" />
+                            <path d="M809.746 23.436C857.107-25.59 917.78-43.81 945.26-17.261c27.48 26.548 11.362 87.811-35.997 136.837C861.9 168.6 801.229 186.82 773.749 160.272c-27.48-26.548-11.364-87.813 35.997-136.837Z" />
+                            <path d="M806.816 24.042C853.278-27.55 914.533-48.13 943.634-21.923c29.099 26.206 15.026 89.275-31.436 140.867-46.462 51.593-107.717 72.172-136.818 45.966-29.1-26.206-15.026-89.276 31.436-140.868Z" />
+                            <path d="M803.75 24.729c45.389-54.088 107.145-76.99 137.935-51.152 30.79 25.838 18.955 90.63-26.434 144.719-45.39 54.089-107.145 76.99-137.935 51.152-30.79-25.838-18.955-90.631 26.434-144.72Z" />
+                            <path d="M800.547 25.454c44.137-56.52 106.318-81.724 138.885-56.293 32.567 25.431 23.187 91.868-20.95 148.388-44.137 56.522-106.317 81.725-138.884 56.293-32.567-25.43-23.188-91.867 20.949-148.388Z" />
+                            <path d="M797.176 26.272c42.708-58.86 105.237-86.324 139.663-61.345 34.426 24.98 27.712 92.944-14.996 151.803-42.708 58.86-105.237 86.325-139.663 61.345-34.426-24.98-27.712-92.944 14.996-151.803Z" />
+                            <path d="M793.647 27.183c41.113-61.1 103.933-90.787 140.31-66.309 36.379 24.478 32.54 93.853-8.573 154.953-41.114 61.1-103.933 90.788-140.311 66.309-36.38-24.478-32.54-93.853 8.574-154.953Z" />
+                            <path d="M789.932 28.207c39.35-63.227 102.4-95.095 140.826-71.18 38.425 23.914 37.674 94.556-1.677 157.784-39.35 63.226-102.4 95.095-140.825 71.18-38.426-23.916-37.675-94.559 1.676-157.785Z" />
+                            <path d="M786.041 29.348c37.433-65.24 100.673-99.251 141.251-75.97 40.578 23.284 43.126 95.045 5.694 160.284-37.434 65.24-100.674 99.252-141.25 75.969-40.579-23.282-43.128-95.044-5.695-160.283Z" />
+                            <path d="M781.942 30.642c35.36-67.116 98.748-103.231 141.581-80.666 42.832 22.566 48.891 95.27 13.53 162.387-35.36 67.115-98.748 103.231-141.58 80.666-42.834-22.567-48.89-95.27-13.53-162.387Z" />
+                            <path d="M777.66 32.101c33.156-68.862 96.675-107.044 141.876-85.282 45.2 21.762 54.964 95.228 21.81 164.091-33.155 68.862-96.675 107.044-141.875 85.282s-54.965-95.228-21.81-164.091Z" />
+                            <path d="M773.17 33.748c30.818-70.465 94.454-110.685 142.133-89.832 47.681 20.853 61.35 94.882 30.533 165.347-30.819 70.465-94.454 110.684-142.134 89.832-47.68-20.853-61.35-94.881-30.532-165.347Z" />
+                            <path d="M768.479 35.603c28.366-71.924 92.118-114.155 142.395-94.326 50.277 19.828 68.04 94.208 39.674 166.132-28.366 71.923-92.12 114.155-142.396 94.326-50.277-19.829-68.04-94.209-39.673-166.132Z" />
+                            <path d="M763.562 37.694c25.8-73.23 89.67-117.46 142.657-98.791 52.99 18.668 75.03 93.166 49.23 166.395-25.8 73.229-89.67 117.46-142.658 98.79-52.988-18.667-75.028-93.165-49.229-166.394Z" />
+                            <path d="M758.443 40.06C781.587-34.316 845.59-80.532 901.399-63.166c55.809 17.367 82.29 91.739 59.147 166.115-23.144 74.377-87.147 120.593-142.957 103.227-55.81-17.365-82.29-91.738-59.146-166.115Z" />
+                            <path d="M753.137 42.71c20.414-75.375 84.585-123.582 143.331-107.672 58.745 15.909 89.82 89.91 69.405 165.287-20.414 75.376-84.585 123.583-143.33 107.673-58.746-15.91-89.82-89.911-69.406-165.287Z" />
+                            <path d="M747.614 45.657c17.603-76.232 81.97-126.464 143.766-112.194 61.798 14.27 97.624 87.636 80.02 163.869-17.602 76.233-81.97 126.464-143.765 112.194-61.797-14.27-97.624-87.636-80.021-163.87Z" />
+                            <path d="M741.91 48.97c14.742-76.928 79.338-129.203 144.278-116.758 64.942 12.444 105.636 84.896 90.894 161.824-14.742 76.93-79.338 129.205-144.278 116.76-64.94-12.444-105.636-84.896-90.894-161.825Z" />
+                            <path d="M736.052 52.645c11.844-77.487 76.72-131.854 144.903-121.431C949.138-58.364 994.81 12.9 982.965 90.388c-11.845 77.487-76.72 131.853-144.903 121.43-68.183-10.421-113.855-81.686-102.01-159.173Z" />
+                            <path d="M730.013 56.711c8.9-77.907 74.086-134.44 145.597-126.27 71.509 8.168 122.265 77.947 113.365 155.854-8.9 77.908-74.086 134.442-145.596 126.273-71.511-8.17-122.266-77.949-113.366-155.857Z" />
+                            <path d="M723.862 61.196c5.945-78.2 71.49-136.977 146.403-131.282 74.91 5.695 130.818 73.705 124.874 151.905-5.944 78.2-71.491 136.976-146.402 131.282-74.912-5.696-130.82-73.705-124.875-151.905Z" />
+                            <path d="M859.505-70.5c78.428 0 142.005 63.578 142.005 142.005 0 78.428-63.577 142.005-142.005 142.005-78.427 0-142.005-63.577-142.005-142.005C717.5-6.922 781.078-70.5 859.505-70.5Z" />
+                        </g>
+                    </svg>                    <!-- Card content -->
+                    <div class="relative pt-[6.25rem] pb-14">
+                        <div class="text-xs font-bold uppercase text-green-400 tracking-widest mb-2">Featured app</div>
+                        <h3 class="text-2xl font-extrabold text-indigo-50 leading-snug mb-2">Join us today!</h3>
+                        <p class="text-indigo-200">Lorem ipsum dolor sit amet, consecte adipiscing elit sed do eiusmod.</p>
+                        <img class="w-32 mt-8" src="https://images.ctfassets.net/v78wipeni189/20xIwVtyegCWhn6kXFmsir/cdae5045b2ac8a87753f0788471923a8/message.png?fm=webp&w=395&q=80&h=202"/>
+                    </div>
+                    <!-- Card footer -->
+                    <div class="relative text-right">
+                        <a class="inline-flex w-11 h-11 justify-center items-center bg-green-400 hover:bg-green-300 text-pink-50 hover:text-white rounded-full transition duration-150" href="#0"><span class="sr-only">Read more</span> <span class="font-bold -mt-px">-></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-xs mx-auto grow-on-hover overflow-hidden">
+                <div class="relative bg-blue-600 shadow-lg rounded-lg shadow-lg p-5 overflow-hidden">
+                    <!-- Illustration -->
+                    <svg class="absolute top-0 right-0" width="158" height="119" aria-hidden="true">
+                        <defs>
+                            <linearGradient x1="50%" y1="0%" x2="50%" y2="96.22%" id="a">
+                                <stop stop-color="#818CF8" stop-opacity=".88" offset="0%" />
+                                <stop stop-color="#818CF8" stop-opacity=".24" offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <g transform="translate(-719 -96)" stroke="url(#a)" fill="none" fill-rule="evenodd">
+                            <path d="M802.959 69.706c.987-31.014 27.104-55.35 58.333-54.356 31.23.994 55.747 26.94 54.76 57.954-.987 31.013-27.103 55.349-58.333 54.356-31.23-.994-55.747-26.94-54.76-57.954Z" />
+                            <path d="M859.16 15.329c32.617-.2 59.212 24.794 59.4 55.824.19 31.028-26.097 56.343-58.714 56.543-32.617.2-59.212-24.793-59.4-55.823-.19-31.03 26.097-56.346 58.714-56.544Z" />
+                            <path d="M857.026 15.367c34.01-1.498 62.687 22.421 64.052 53.424 1.366 31.003-25.097 57.35-59.107 58.847-34.01 1.5-62.688-22.419-64.053-53.422-1.366-31.004 25.098-57.35 59.108-58.849Z" />
+                            <path d="M854.918 15.477c35.407-2.907 66.167 19.823 68.708 50.768 2.54 30.945-24.105 58.386-59.51 61.292-35.407 2.906-66.169-19.825-68.708-50.769-2.54-30.945 24.104-58.386 59.51-61.291Z" />
+                            <path d="M852.8 15.648c36.79-4.42 69.62 17.006 73.326 47.858 3.707 30.85-23.113 59.445-59.903 63.865-36.789 4.42-69.618-17.006-73.325-47.857-3.707-30.852 23.112-59.446 59.902-63.866Z" />
+                            <path d="M850.69 15.868c38.154-6.045 73.03 13.966 77.9 44.696 4.869 30.731-22.113 60.543-60.267 66.588-38.154 6.046-73.031-13.966-77.9-44.695-4.87-30.73 22.113-60.544 60.267-66.589Z" />
+                            <path d="M848.59 16.119c39.488-7.784 76.386 10.699 82.415 41.282 6.028 30.584-21.095 61.686-60.582 69.47-39.487 7.785-76.385-10.698-82.414-41.282-6.028-30.583 21.095-61.686 60.582-69.47Z" />
+                            <path d="M846.5 16.415c40.78-9.629 79.663 7.223 86.845 37.641 7.182 30.418-20.054 62.882-60.836 72.511-40.78 9.63-79.663-7.222-86.845-37.639-7.183-30.418 20.054-62.883 60.835-72.513Z" />
+                            <path d="M844.42 16.764c42.027-11.578 82.85 3.548 91.18 33.786 8.33 30.238-18.986 64.136-61.013 75.714-42.028 11.58-82.85-3.547-91.18-33.786-8.332-30.237 18.986-64.136 61.013-75.714Z" />
+                            <path d="M842.337 17.103c43.206-13.639 85.917-.342 95.4 29.697 9.48 30.04-17.858 65.449-61.064 79.086-43.205 13.638-85.917.34-95.399-29.698-9.48-30.04 17.857-65.448 61.063-79.085Z" />
+                            <path d="M840.262 17.483c44.315-15.792 88.857-4.409 99.49 25.424 10.632 29.835-16.674 66.822-60.989 82.614-44.314 15.792-88.857 4.41-99.489-25.425-10.632-29.833 16.674-66.82 60.988-82.613Z" />
+                            <path d="M838.159 17.875c45.333-18.039 91.636-8.653 103.42 20.963 11.786 29.616-15.411 68.248-60.744 86.287-45.333 18.04-91.636 8.653-103.421-20.963-11.785-29.617 15.412-68.248 60.745-86.287Z" />
+                            <path d="M836.07 18.28C882.332-2.098 930.33 5.214 943.278 34.61c12.948 29.396-14.06 69.744-60.321 90.12-46.262 20.376-94.261 13.065-107.208-16.332-12.948-29.395 14.059-69.744 60.32-90.12Z" />
+                            <path d="M833.941 18.697C881.02-4.093 930.63 1.079 944.748 30.246c14.12 29.167-12.6 71.285-59.679 94.075-47.079 22.788-96.689 17.618-110.807-11.55-14.119-29.167 12.601-71.285 59.68-94.074Z" />
+                            <path d="M831.784 19.112c47.775-25.274 98.913-22.307 114.22 6.626 15.305 28.934-11.016 72.878-58.79 98.151-47.776 25.275-98.914 22.308-114.22-6.626-15.307-28.933 11.015-72.877 58.79-98.15Z" />
+                            <path d="M829.594 19.545C877.94-8.273 930.518-7.561 947.03 21.135c16.512 28.697-9.295 74.51-57.64 102.329-48.347 27.818-100.925 27.106-117.437-1.59s9.295-74.511 57.641-102.33Z" />
+                            <path d="M827.381 19.982c48.786-30.418 102.72-32.005 120.463-3.546 17.745 28.46-7.42 76.19-56.205 106.607-48.785 30.418-102.719 32.004-120.463 3.545-17.745-28.459 7.42-76.189 56.205-106.606Z" />
+                            <path d="M825.097 20.42c49.073-33.056 104.261-36.981 123.266-8.768 19.006 28.214-5.368 77.884-54.44 110.94-49.073 33.057-104.262 36.98-123.267 8.767-19.005-28.213 5.37-77.883 54.441-110.94Z" />
+                            <path d="M822.745 20.865c49.202-35.722 105.546-42.014 125.847-14.052 20.3 27.961-3.129 79.587-52.331 115.31-49.204 35.721-105.547 42.013-125.847 14.052-20.301-27.962 3.129-79.588 52.331-115.31Z" />
+                            <path d="M820.333 21.349c49.18-38.398 106.585-47.066 128.217-19.36 21.632 27.707-.7 81.295-49.88 119.693-49.18 38.398-106.585 47.065-128.217 19.359-21.632-27.706.7-81.294 49.88-119.692Z" />
+                            <path d="M817.836 21.827C866.822-19.256 925.189-30.318 948.2-2.879c23.013 27.44 1.957 82.988-47.03 124.071-48.984 41.084-107.351 52.146-130.364 24.706-23.012-27.438-1.957-82.987 47.029-124.07Z" />
+                            <path d="M815.25 22.327C863.87-21.434 923.1-34.891 947.544-7.733c24.446 27.16 4.847 84.653-43.774 128.414-48.62 43.76-107.852 57.218-132.296 30.059-24.445-27.16-4.847-84.652 43.774-128.413Z" />
+                            <path d="M812.554 22.866c48.081-46.41 108.08-62.255 134.01-35.391 25.93 26.865 7.974 86.265-40.106 132.675-48.08 46.41-108.079 62.255-134.009 35.39-25.93-26.864-7.976-86.264 40.105-132.674Z" />
+                            <path d="M809.746 23.436C857.107-25.59 917.78-43.81 945.26-17.261c27.48 26.548 11.362 87.811-35.997 136.837C861.9 168.6 801.229 186.82 773.749 160.272c-27.48-26.548-11.364-87.813 35.997-136.837Z" />
+                            <path d="M806.816 24.042C853.278-27.55 914.533-48.13 943.634-21.923c29.099 26.206 15.026 89.275-31.436 140.867-46.462 51.593-107.717 72.172-136.818 45.966-29.1-26.206-15.026-89.276 31.436-140.868Z" />
+                            <path d="M803.75 24.729c45.389-54.088 107.145-76.99 137.935-51.152 30.79 25.838 18.955 90.63-26.434 144.719-45.39 54.089-107.145 76.99-137.935 51.152-30.79-25.838-18.955-90.631 26.434-144.72Z" />
+                            <path d="M800.547 25.454c44.137-56.52 106.318-81.724 138.885-56.293 32.567 25.431 23.187 91.868-20.95 148.388-44.137 56.522-106.317 81.725-138.884 56.293-32.567-25.43-23.188-91.867 20.949-148.388Z" />
+                            <path d="M797.176 26.272c42.708-58.86 105.237-86.324 139.663-61.345 34.426 24.98 27.712 92.944-14.996 151.803-42.708 58.86-105.237 86.325-139.663 61.345-34.426-24.98-27.712-92.944 14.996-151.803Z" />
+                            <path d="M793.647 27.183c41.113-61.1 103.933-90.787 140.31-66.309 36.379 24.478 32.54 93.853-8.573 154.953-41.114 61.1-103.933 90.788-140.311 66.309-36.38-24.478-32.54-93.853 8.574-154.953Z" />
+                            <path d="M789.932 28.207c39.35-63.227 102.4-95.095 140.826-71.18 38.425 23.914 37.674 94.556-1.677 157.784-39.35 63.226-102.4 95.095-140.825 71.18-38.426-23.916-37.675-94.559 1.676-157.785Z" />
+                            <path d="M786.041 29.348c37.433-65.24 100.673-99.251 141.251-75.97 40.578 23.284 43.126 95.045 5.694 160.284-37.434 65.24-100.674 99.252-141.25 75.969-40.579-23.282-43.128-95.044-5.695-160.283Z" />
+                            <path d="M781.942 30.642c35.36-67.116 98.748-103.231 141.581-80.666 42.832 22.566 48.891 95.27 13.53 162.387-35.36 67.115-98.748 103.231-141.58 80.666-42.834-22.567-48.89-95.27-13.53-162.387Z" />
+                            <path d="M777.66 32.101c33.156-68.862 96.675-107.044 141.876-85.282 45.2 21.762 54.964 95.228 21.81 164.091-33.155 68.862-96.675 107.044-141.875 85.282s-54.965-95.228-21.81-164.091Z" />
+                            <path d="M773.17 33.748c30.818-70.465 94.454-110.685 142.133-89.832 47.681 20.853 61.35 94.882 30.533 165.347-30.819 70.465-94.454 110.684-142.134 89.832-47.68-20.853-61.35-94.881-30.532-165.347Z" />
+                            <path d="M768.479 35.603c28.366-71.924 92.118-114.155 142.395-94.326 50.277 19.828 68.04 94.208 39.674 166.132-28.366 71.923-92.12 114.155-142.396 94.326-50.277-19.829-68.04-94.209-39.673-166.132Z" />
+                            <path d="M763.562 37.694c25.8-73.23 89.67-117.46 142.657-98.791 52.99 18.668 75.03 93.166 49.23 166.395-25.8 73.229-89.67 117.46-142.658 98.79-52.988-18.667-75.028-93.165-49.229-166.394Z" />
+                            <path d="M758.443 40.06C781.587-34.316 845.59-80.532 901.399-63.166c55.809 17.367 82.29 91.739 59.147 166.115-23.144 74.377-87.147 120.593-142.957 103.227-55.81-17.365-82.29-91.738-59.146-166.115Z" />
+                            <path d="M753.137 42.71c20.414-75.375 84.585-123.582 143.331-107.672 58.745 15.909 89.82 89.91 69.405 165.287-20.414 75.376-84.585 123.583-143.33 107.673-58.746-15.91-89.82-89.911-69.406-165.287Z" />
+                            <path d="M747.614 45.657c17.603-76.232 81.97-126.464 143.766-112.194 61.798 14.27 97.624 87.636 80.02 163.869-17.602 76.233-81.97 126.464-143.765 112.194-61.797-14.27-97.624-87.636-80.021-163.87Z" />
+                            <path d="M741.91 48.97c14.742-76.928 79.338-129.203 144.278-116.758 64.942 12.444 105.636 84.896 90.894 161.824-14.742 76.93-79.338 129.205-144.278 116.76-64.94-12.444-105.636-84.896-90.894-161.825Z" />
+                            <path d="M736.052 52.645c11.844-77.487 76.72-131.854 144.903-121.431C949.138-58.364 994.81 12.9 982.965 90.388c-11.845 77.487-76.72 131.853-144.903 121.43-68.183-10.421-113.855-81.686-102.01-159.173Z" />
+                            <path d="M730.013 56.711c8.9-77.907 74.086-134.44 145.597-126.27 71.509 8.168 122.265 77.947 113.365 155.854-8.9 77.908-74.086 134.442-145.596 126.273-71.511-8.17-122.266-77.949-113.366-155.857Z" />
+                            <path d="M723.862 61.196c5.945-78.2 71.49-136.977 146.403-131.282 74.91 5.695 130.818 73.705 124.874 151.905-5.944 78.2-71.491 136.976-146.402 131.282-74.912-5.696-130.82-73.705-124.875-151.905Z" />
+                            <path d="M859.505-70.5c78.428 0 142.005 63.578 142.005 142.005 0 78.428-63.577 142.005-142.005 142.005-78.427 0-142.005-63.577-142.005-142.005C717.5-6.922 781.078-70.5 859.505-70.5Z" />
+                        </g>
+                    </svg>
+                    <!-- Card content -->
+                    <div class="relative pt-[6.25rem] pb-14">
+                        <div class="text-xs font-bold uppercase text-green-400 tracking-widest mb-2">Featured app</div>
+                        <h3 class="text-2xl font-extrabold text-indigo-50 leading-snug mb-2">Our charity of the year!</h3>
+                        <p class="text-indigo-200">Lorem ipsum dolor sit amet, consecte adipiscing elit sed do eiusmod.</p>
+                        <img class="w-32" src="https://images.ctfassets.net/v78wipeni189/m13mP8z44vQ9r5H3uVCBt/aa2c97bd585d8f6712ddb9e3909fd421/M2D8eWbT_400x400-removebg-preview.png?fm=webp&w=395&q=80&h=395"/>
+                    </div>
+                    <!-- Card footer -->
+                    <!-- <div class="relative text-right">
+                        <a class="inline-flex w-11 h-11 justify-center items-center bg-green-400 hover:bg-green-300 text-pink-50 hover:text-white rounded-full transition duration-150" href="#0"><span class="sr-only">Read more</span> <span class="font-bold -mt-px">-></span></a>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="my-8 px-6">
+        <div class="flex flex-row justify-center items-center w-full">
+            <div class="flex flex-col justify-center items-center space-y-8">
+                <div class="flex flex-row justify-center items-center gap-6 w-1/2 p-6">
+
+                    <img class="rounded-lg" src="https://images.ctfassets.net/v78wipeni189/2Ut1LGFQmXtrpliyPB6IZG/fe086e8c3cf031065641f53217a31885/oldman_with_present.jpg?fm=webp&w=960&q=80&h=639" />
+                    <img class="rounded-lg" src="https://images.ctfassets.net/v78wipeni189/4IiekWvma3ipMhNNEYX5Ic/a0c5fc5eb0598ce32376fcf75e904882/girl_new_bicycle.jpg?fm=webp&w=960&q=80&h=640" />
+                </div>
+    
+                <div class="flex flex-row justify-center items-center gap-6 w-1/2 p-6">
+                   
+                    <img class="rounded-lg" src="https://images.ctfassets.net/v78wipeni189/5K3xP7X0RsRxvJnmTRGXmO/c15510528b456841034640ee0f84189b/girl_looking_into_parcel.jpg?fm=webp&w=960&q=80&h=640" />
+                    <img class="rounded-lg" src="https://images.ctfassets.net/v78wipeni189/2Ut1LGFQmXtrpliyPB6IZG/fe086e8c3cf031065641f53217a31885/oldman_with_present.jpg?fm=webp&w=960&q=80&h=639" />
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center space-y-4 px-6 py-4">
+                <h1 class="text-8xl font-semibold text-teal-800 mx-4">Delivering</h1>
+                <h1 class="text-8xl font-semibold text-teal-800 mx-4 whitespace-nowrap">more than</h1>
+                <h1 class="text-8xl font-semibold text-teal-800 mx-4 whitespace-nowrap ">just parcels</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="my-8 mt-16 w-full flex justify-center items-center ">
+        <div class="flex rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-3/4">
+            <img class=" w-1/2 rounded-t-lg object-cover md:h-auto md:!rounded-none md:!rounded-l-lg" src="https://images.ctfassets.net/v78wipeni189/A73y7qwWBsYUcq7ZurjII/ddbf573ccdc0f252f2a5a45229aecc1e/tracking_graphic.jpg?fm=webp&w=1920&q=80&h=1292" alt="" />
+            <div class="flex flex-col justify-start p-6 w-1/2 bg-blue-700 text-neutral-50">
+              <h5 class="my-2 mb-6 text-4xl font-bold">
+                Free Tracking on all Parcel Services
+              </h5>
+              <p class="mb-4 text-lg">
+                    Whether you need to send a parcel within the UK or overseas, at Parcel2Go you can always track a parcel for free. 
+
+                    We offer parcel tracking on all parcel delivery, including collection services as well as drop off services. So you can be certain that your parcel will arrive safely at no extra cost.
+
+                    And for extra peace of mind, add Parcel Protection up to the value of £10,000. If you ever have an issue with a parcel, our customer service team is available 24/7 to help you.
+              </p>
+              <p class="text-md">
+                Last updated 3 mins ago
+              </p>
+            </div>
+          </div>
+          
+    </div>
+
+    <div class="mt-12">
+        <div class="bg-[#F08080] px-6 py-8 mt-6 flex flex-row gap-6 justify-around items-center">
+            <div class="flex flex-col justify-center items-start space-y-8">
+                <h1 class="font-bold text-white text-4xl">Get the nation's largest local same-day footprint.</h1>
+                <button class="outline-none border-none bg-white font-bold text-md px-6 py-4 text-emerald-500 transition-all duration-300 ease-in-out hover:bg-gray-300 focus:bg-gray-300">GET STARTED</button>
+            </div>
+            <img class="w-80" src="https://www.roadie.com/wp-content/uploads/2018/04/Desktop-and-iPhone-768x647-1-540x455.png"/>
+        </div>
+    </div>
+
+    <div class="my-8 mt-16 px-6 py-6">
+        <div class="grid mb-8 mt-8 border-3 border-gray-200 rounded-lg shadow-sm border-gray-700 md:mb-12 md:grid-cols-2">
+            <figure class="flex flex-col items-center justify-center p-8 text-center bg-pink-100 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">I liked this service a lot.</h3>
+                    <p class="my-4">"I will use this site more often"</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center space-x-3">
+                    <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                </figcaption>   
+            </figure>
+            <figure class="flex flex-col items-center justify-center p-8 text-center bg-pink-100 border-b border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">This packaging service is amazing</h3>
+                    <p class="my-4">"I enjoyed this a lot"</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center space-x-3">
+                    <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
+                </figcaption>    
+            </figure>
+            <figure class="flex flex-col items-center justify-center p-8 text-center bg-pink-100 border-b border-gray-200 rounded-bl-lg md:border-b-0 md:border-r dark:bg-gray-800 dark:border-gray-700">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Very good review</h3>
+                    <p class="my-4">"I will review this to help other people find a good place to stay"</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center space-x-3">
+                    <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
+                </figcaption>    
+            </figure>
+            <figure class="flex flex-col items-center justify-center p-8 text-center bg-pink-100 border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Good place</h3>
+                    <p class="my-4">"You have many options, but this is the best. Really good conditions"</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center space-x-3">
+                    <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture">
+                </figcaption>    
+            </figure>
+        </div>
+    </div>
+
+
+    <section class="h-[200vh] flex items-center bg-black" data-text-reveal>
+        <div style="pointer-events: none;" class="fixed w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+            <div class="px-4 md:px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="font-extrabold text-3xl md:text-4xl bg-clip-text text-transparent bg-[radial-gradient(50%_50%_at_50%_50%,theme(colors.purple.50),theme(colors.purple.500)_20%,transparent_50%)] bg-[length:400%_800%] bg-[50%_calc(100%*var(--reveal-value))]">
+                        Packeting website one of the best services lorem ipsum  Packeting website one of the best services lorem ipsum  Packeting website one of the best services lorem ipsum Packeting website one of the best services lorem ipsum  Packeting website one of the best services lorem ipsum  Packeting website one of the best services lorem ipsum  Packeting website one of the best services lorem ipsum
+                    </div>
+                    <div class="mt-8 md:flex items-center justify-between space-y-4 md:space-y-0 opacity-[var(--opacity-value)]">
+                        <div class="flex items-center space-x-4">
+                        </div>
+                        <div class="flex items-center space-x-8">
+                            <div class="flex items-center space-x-1 whitespace-nowrap">
+                                <button class="text-slate-300 hover:text-slate-50 p-2" aria-label="Like">
+                                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                                        <path d="M16.428 1.57a5.363 5.363 0 0 1 0 7.586l-7.43 7.429-.707-.707-6.72-6.722A5.363 5.363 0 0 1 8.999 1.42a5.364 5.364 0 0 1 7.429.15Zm-1.415 6.172a3.363 3.363 0 1 0-5.18-4.237l-.834 1.256-.833-1.256a3.363 3.363 0 1 0-5.18 4.237l6.013 6.014 6.014-6.014Z" />
+                                    </svg>
+                                </button>
+                                <div class="text-slate-400 font-medium">4.7K Reactions</div>
+                            </div>
+                            <!-- <div class="flex items-center space-x-1 whitespace-nowrap">
+                                <button class="text-slate-300 hover:text-slate-50 p-2" aria-label="Comment">
+                                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+                                        <path d="m16.732 17.108-5.546-2.256A8.607 8.607 0 0 1 9 15.09c-4.952 0-9-3.31-9-7.546C0 3.31 4.048 0 9 0s9 3.31 9 7.57a6.972 6.972 0 0 1-1.842 4.556l.574 4.982Zm-2.674-5.73.368-.345A4.96 4.96 0 0 0 16 7.545C16 4.513 12.926 2 9 2S2 4.513 2 7.545c0 3.033 3.074 5.546 7.02 5.546a6.671 6.671 0 0 0 1.961-.253l.331-.094 3.047 1.24-.301-2.606Z" />
+                                    </svg>
+                                </button>
+                                <div class="text-slate-400 font-medium">112 Comments</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,135 @@
+{% extends "core/base.html" %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+
+<div>
+    <div class="mb-8">
+        <div id="services-div" class="w-full flex flex-col justify-center items-center px-6 py-6 space-y-8">
+            <div class="flex flex-row justify-center items-center space-x-8 gap-4">
+                <img class="w-80" src="https://images.ctfassets.net/v78wipeni189/gHFnWf1D9zGehCrsa8MWu/85ee684a12618699666f718e5382ea56/homepage_sven-backup-hero-left.png?fm=webp&w=960&q=100&h=981&fit=pad" alt="packetingIMage" />
+                <div class="flex flex-col justify-center space-y-6 gap-2">
+                    <h1 class="font-bold text-5xl text-white my-4">Compare the Cheapest Parcel Delivery Prices</h1>
+                    <p class="font-semibold text-white text-2xl">Send from Only £2.58 (£2.15 plus VAT)*</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-0 space-y-0">
+                <div class="self-start justify-start px-8 py-4 bg-[#D9EBFD] rounded-t-xl rounded-bl-lg">
+                    <h1 class="font-semibold text-xl text-[#19547C]">Send internationaly</h1>
+                </div>
+                <form class="my-4" action="." method="POST" id="personForm">
+                    {% csrf_token %}
+        
+                    <div class="w-full flex flex-row justify-center items-center space-x-16 px-4 py-4 bg-[#D9EBFD] rounded-xl">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                {{ form.sendFrom.label_tag }}
+                                {{ form.sendFrom }}
+                            </div>
+                            <div>
+                                {{ form.sendTo.label_tag }}
+                                {{ form.sendTo }}
+                            </div>
+                            <div>
+                                {{ form.weight.label_tag }}
+                                {{ form.weight }}
+                            </div>
+                        </div>
+            
+                        <button type="submit"
+                                class="my-4 text-lg font-semibold px-8 py-4 outline-none border-none rounded-lg text-white bg-[#027800] transition-all duration-300 ease-in-out hover:bg-[#015f00] max-[426px]:mt-8 max-[320px]:p-2 max-[320px]:px-4 whitespace-nowrap">Get a Quote
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <p class="text-white font-semibold text-xl my-4 text-center">* For parcels up to 20KG, Parcel2Go have the cheapest domestic prices for delivery only services in the UK</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-16">
+        <div class="flex flex-col justify-center items-center space-y-8 text-center">
+            <h1 class="my-6 text-4xl font-bold text-[#19547C]">Comparing Prices from the UK’s Most Trusted Parcel Couriers</h1>
+            <h4 class="my-6 text-2xl font-semibold text-[#19547C] w-3/4">We've helped people find the cheapest prices for over 83 million parcels since 2001. Join them and save on your next parcel delivery!</h4>
+        </div>
+    </div>
+
+    <!-- <div class="mt-12 my-8 px-12 py-6">
+        <div class="px-8 py-4 rounded-xl border-2 border-gray-700 gap-0 flex flex-row justify-center items-center h-auto">
+            <div class="w-1/2 flex flex-col justify-center items-center">
+                <div class="flex flex-col justify-center items-center gap-4 space-y-4">
+                    <h1 class="text-6xl font-bold text-[#19547C]">Cheap Parcel Delivery on All Services</h1>
+                    <p class="text-lg text-slate-700">Here at Parcel2Go, we’re dedicated to bringing you the cheapest parcel delivery in the UK and worldwide. Our Lowest Price Guarantee means that no matter what delivery service you use, if you find a comparable service elsewhere, we’ll match the price.
+
+                        We work closely with the best UK couriers, including Royal Mail, Yodel Direct, Evri and DPD, to bring you cheap parcel delivery without compromising on a high quality service. And with parcel delivery expert, Sven Storkofferson, helping you glide through parcel delivery, finding the best courier services has never been easier.
+                        
+                        Send a parcel from just £2.15 excl. VAT! Get a quick quote today.</p>
+                </div>
+
+                <div class="flex flex-col justify-center items-center gap-4 space-y-4">
+                    <h1 class="text-6xl font-bold text-[#19547C]">Cheap Parcel Delivery on All Services</h1>
+                    <p class="text-lg text-slate-700">Here at Parcel2Go, we’re dedicated to bringing you the cheapest parcel delivery in the UK and worldwide. Our Lowest Price Guarantee means that no matter what delivery service you use, if you find a comparable service elsewhere, we’ll match the price.
+
+                        We work closely with the best UK couriers, including Royal Mail, Yodel Direct, Evri and DPD, to bring you cheap parcel delivery without compromising on a high quality service. And with parcel delivery expert, Sven Storkofferson, helping you glide through parcel delivery, finding the best courier services has never been easier.
+                        
+                        Send a parcel from just £2.15 excl. VAT! Get a quick quote today.</p>
+                </div>
+            </div>
+            <img class="w-1/2 h-full" src="https://images.ctfassets.net/v78wipeni189/1AkUgeiFwIP7l21hi7mcKx/f987fb0c328ea0ccb5a448820bff635e/woman_on_telephone.jpg?fm=webp&w=1920&q=80&h=1279" alt="Imazhi"/>
+        </div>
+    </div> -->
+
+    <div class="mt-12 my-8 px-12 py-6">
+        <div class="rounded-xl border-2 border-gray-400 flex flex-row justify-center items-stretch">
+            <div class="w-1/2 flex flex-col justify-center items-center px-8 py-6">
+                <div class="mt-6 mb-4 pb-10 flex flex-col justify-center items-center gap-4 border-b-2 border-gray-400">
+                    <h1 class="my-4 text-4xl font-bold text-[#19547C]">Cheap Parcel Delivery on All Services</h1>
+                    <p class="text-lg text-slate-700">Here at Parcel2Go, we’re dedicated to bringing you the cheapest parcel delivery in the UK and worldwide. Our Lowest Price Guarantee means that no matter what delivery service you use, if you find a comparable service elsewhere, we’ll match the price.<br />
+    
+                        We work closely with the best UK couriers, including Royal Mail, Yodel Direct, Evri and DPD, to bring you cheap parcel delivery without compromising on a high quality service. And with parcel delivery expert, Sven Storkofferson, helping you glide through parcel delivery, finding the best courier services has never been easier.
+                        
+                       <br /> Send a parcel from just £2.15 excl. VAT! Get a quick quote today.</p>
+                </div>
+                <div class="mb-6 pt-10 flex flex-col justify-center items-center gap-4">
+                    <h1 class="my-4 text-4xl font-bold text-[#19547C]">Cheap Parcel Delivery on All Services</h1>
+                    <p class="text-lg text-slate-700">Here at Parcel2Go, we’re dedicated to bringing you the cheapest parcel delivery in the UK and worldwide. Our Lowest Price Guarantee means that no matter what delivery service you use, if you find a comparable service elsewhere, we’ll match the price.
+    
+                       <br /> We work closely with the best UK couriers, including Royal Mail, Yodel Direct, Evri and DPD, to bring you cheap parcel delivery without compromising on a high quality service. And with parcel delivery expert, Sven Storkofferson, helping you glide through parcel delivery, finding the best courier services has never been easier.
+                        
+                       <br /> Send a parcel from just £2.15 excl. VAT! Get a quick quote today.</p>
+                </div>
+            </div>
+            <div class="w-1/2 flex items-center">
+                <img class="object-cover w-full h-full" src="https://images.ctfassets.net/v78wipeni189/1AkUgeiFwIP7l21hi7mcKx/f987fb0c328ea0ccb5a448820bff635e/woman_on_telephone.jpg?fm=webp&w=1920&q=80&h=1279" alt="Image"/>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mt-10">
+        <div class="flex flex-row items-center justify-center space-x-10 px-6 py-6 ">
+    
+            <div class="px-6 py-8 w-1/2 flex flex-col justify-center items-center space-y-4 bg-gray-100 rounded-xl border-2 border-gray-400">
+                <h1 class="my-4 text-4xl font-bold text-[#19547C] self-start">Delivery Services to Suit Your Needs</h1>
+                <p class="text-lg text-slate-700">Here at Parcel2Go, we’re dedicated to bringing you the cheapest parcel delivery in the UK and worldwide. Our Lowest Price Guarantee means that no matter what delivery service you use, if you find a comparable service elsewhere, we’ll match the price.
+    
+                    <br /> We work closely with the best UK couriers, including Royal Mail, Yodel Direct, Evri and DPD, to bring you cheap parcel delivery without compromising on a high-quality service. And with parcel delivery expert, Sven Storkofferson, helping you glide through parcel delivery, finding the best courier services has never been easier.
+    
+                    <br /> Send a parcel from just £2.15 excl. VAT! Get a quick quote today.
+                </p>
+            </div>
+    
+            <div class="w-1/4 self-stretch bg-cover bg-center rounded-xl border-2 border-gray-400" style="background-image: url('https://images.ctfassets.net/v78wipeni189/2GslK37ZejQtKSV0QCy6xi/2641d0a3ef1c42a62f728a76697f8553/spar-store.jpg?fm=webp&w=1920&q=80&h=1304')"></div>
+            <div class="w-1/4 self-stretch bg-cover bg-center  rounded-xl border-2 border-gray-400" style="background-image: url('https://images.ctfassets.net/v78wipeni189/4MTw6GzkY971dZt03C0Apa/db879eaccd6e2fae37db8cd3c1349f2a/delivery-signature.jpg?fm=webp&w=744&q=80&h=1117')"></div>
+    
+        </div>
+    </div>
+    
+    
+    
+
+</div>
+
+{% endblock %}

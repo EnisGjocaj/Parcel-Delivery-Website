@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<div id="sidebar" style="display: none;">
+    <form id="track_form" method="post" action="{% url 'core:track_parcel' %}">
+        {% csrf_token %}
+        <label for="parcel_name">Enter Parcel Name:</label>
+        <input type="text" name="parcel_name" id="parcel_name">
+        <button type="submit">Track</button>
+    </form>
+    <p id="destination">{{ destination }}</p>
+</div>
+
+{% endblock %}

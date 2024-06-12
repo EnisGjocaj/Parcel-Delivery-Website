@@ -1,0 +1,35 @@
+Subject: Your service is booked!
+
+Dear {{ user_details.name }},
+
+We are pleased to inform you that your service has been successfully booked. Below are the details of your booking:
+
+Booking Details:
+----------------
+User: {{ user_details.name }} {{ user_details.surname }}
+Email: {{ user_details.email }}
+
+Service Details:
+----------------
+Service Name: {{ serviceModelInfo.name }}
+From: {{ serviceModelInfo.sendFrom }}
+To: {{ serviceModelInfo.sendTo }}
+Weight: {{ serviceModelInfo.weight }}
+
+Delivery Details:
+-----------------
+Delivery Full Name: {{ delivery_data.delivery_details.delivery_full_name }}
+Delivery Address: {{ delivery_data.delivery_details.delivery_address }}
+Delivery Postal Code: {{ delivery_data.delivery_details.delivery_postal_code }}
+
+Return Details:
+---------------
+Return Full Name: {{ delivery_data.return_details.return_full_name }}
+Return Address: {{ delivery_data.return_details.return_address }}
+Return Postal Code: {{ delivery_data.return_details.return_postal_code }}
+
+Thank you for choosing our service. If you have any questions or need further assistance, please don't hesitate to contact us.
+
+Best regards,
+
+

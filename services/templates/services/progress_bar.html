@@ -1,0 +1,151 @@
+<!-- progress_bar.html -->
+<!-- Progress bar -->
+<div class="relative">
+    <div class="absolute top-0 w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div id="progressBar" class="bg-blue-600 h-2.5 rounded-full" style="width: {{ progress }}%"></div>
+    </div>
+</div>
+
+<!-- JavaScript to update progress -->
+<script>    
+
+let progress = 0;
+    document.addEventListener("DOMContentLoaded", function() {
+        const progressBar = document.getElementById('progressBar'); // Selecting the blue bar
+        if (progressBar) {
+            // Retrieve progress from session storage
+            const storedProgress = sessionStorage.getItem('progress');
+            if (storedProgress) {
+                progress = parseInt(storedProgress); // Parse progress as an integer
+                progressBar.style.width = progress + '%'; // Update width dynamically
+            } else {
+                progress = 0; // Set default progress if not found in storage
+                progressBar.style.width = progress + '%'; // Update width dynamically
+            }
+        }
+    });
+
+    // Reset progress when the page is loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        progress = 0;
+    });
+
+    // Reset progress when the user navigates back
+    // Reset progress when the user navigates back
+    window.addEventListener("popstate", function(event) {
+        console.log("Popstate")
+        const storedProgress = sessionStorage.getItem('progress');
+        if (storedProgress) {
+            progress = parseInt(storedProgress);
+            const progressBar = document.getElementById('progressBar');
+            if (progressBar) {
+                progressBar.style.width = progress + '%';
+            }
+        } else {
+            progress = 0; // Set default progress if not found in storage
+            const progressBar = document.getElementById('progressBar');
+            if (progressBar) {
+                progressBar.style.width = progress + '%';
+            }
+        }
+    });
+
+
+    function updateProgress(submittedPage) {
+        if (progress < 100) {
+            // Calculate the new progress based on the submitted page
+            let newProgress;
+            switch (submittedPage) {
+                case 'page1':
+                    newProgress = 25;
+                    break;
+                case 'page2':
+                    newProgress = 50;
+                    break;
+                case 'page3':
+                    newProgress = 75;
+                    break;
+                case 'page4':
+                    newProgress = 100;
+                    break;
+                default:
+                    newProgress = progress; // If page is unknown, keep the current progress
+                    break;
+            }
+
+            // Update progress if it's actually increased
+            if (newProgress > progress) {
+                progress = newProgress;
+
+                const progressBar = document.getElementById('progressBar');
+                if (progressBar) {
+                    progressBar.style.width = progress + '%'; // Update width dynamically
+                }
+
+                sessionStorage.setItem('progress', progress);
+            }
+        }
+    }
+    // let progress = 0;
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     const progressBar = document.getElementById('progressBar'); // Selecting the blue bar
+    //     if (progressBar) {
+    //     // Retrieve progress from session storage
+    //         const storedProgress = sessionStorage.getItem('progress');
+    //         if (storedProgress) {
+    //             progress = parseInt(storedProgress); // Parse progress as an integer
+    //             progressBar.style.width = progress + '%'; // Update width dynamically
+    //         } else {
+    //             progress = 0; // Set default progress if not found in storage
+    //             progressBar.style.width = progress + '%'; // Update width dynamically
+    //         }
+    //     }
+    // });
+
+    // function updateProgress(submittedPage) {
+    //     if (progress < 100) {
+    //         // Calculate the new progress based on the submitted page
+    //         let newProgress;
+    //         switch (submittedPage) {
+    //             case 'page1':
+    //                 newProgress = 25;
+    //                 break;
+    //             case 'page2':
+    //                 newProgress = 50;
+    //                 break;
+    //             case 'page3':
+    //                 newProgress = 75;
+    //                 break;
+    //             case 'page4':
+    //                 newProgress = 100;
+    //                 break;
+    //             default:
+    //                 newProgress = progress; // If page is unknown, keep the current progress
+    //                 break;
+    //         }
+
+    //         // Update progress if it's actually increased
+    //         if (newProgress > progress) {
+    //             progress = newProgress;
+
+    //             const progressBar = document.getElementById('progressBar');
+    //             if (progressBar) {
+    //                 progressBar.style.width = progress + '%'; // Update width dynamically
+    //             }
+
+    //             sessionStorage.setItem('progress', progress);
+    //         }
+    //     }
+    // }
+
+    // // Reset progress when the page is loaded
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     progress = 0;
+    // });
+
+    // // Reset progress when the user navigates back
+    // window.addEventListener("popstate", function(event) {
+    //     progress = 0
+    // });
+
+</script>

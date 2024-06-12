@@ -1,0 +1,127 @@
+{% extends "core/base.html" %}
+
+{% block title %}Parcel Information{% endblock %}
+
+{% block content %}
+
+    {% include 'services/progress_bar.html' %}
+
+    <div class="bg-gray-200">
+        <div class="flex flex-row justify-center items-center space-x-8">
+            
+            <div class="w-1/2 flex flex-col justify-center items-center space-y-24">
+                <form class="my-4" onsubmit="updateProgress('page1')" method="POST" id="form1details">
+                    {% csrf_token %}
+        
+                    <div class="bg-white my-8 px-8 py-6 border-t-4 border-[#15537d]">
+                        <div class="flex flex-col">
+                            <h1 class="my-6 mb-10 self-start font-semibold text-3xl text-[#15537d]">My Details</h1>
+                            <div class="flex flex-col justify-center items-center space-y-2">
+                                <div class="flex flex-row justify-center items-center space-x-2 gap-2">
+                                    <p class="text-gray-700 text-lg">Name: </p>
+                                    <div>
+                                        {{ form1.user_attr }}
+                                    </div>
+                                    <div>
+                                        {{ form1.name }}
+                                    </div>
+                                    <div>
+                                        {{ form1.surname }}
+                                    </div>
+                                </div>
+                                <div class="flex flex-row items-center space-x-2">
+                                    <p class="text-gray-700 text-lg">Email:</p>
+                                    <div class="flex-grow"> <!-- Make email field take up remaining space -->
+                                        {{ form1.email }}
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="my-6"> 
+                                <p class="my-6 text-base font-normal text-gray-700">You can change your mind at any time by opting out in your My Account area or clicking the unsubscribe link. 'We' means Parcel2Go.com, we'll never sell or share your information with anyone else. Click here to view our privacy policy.</p>
+                            </div>
+                            <div class="my-4">
+                                <div class="bg-[#c5dfef] px-4 py-2 text-center text-md text-gray-700">Please note that the user data is used for the packeing so you may be supercharged.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white my-8 px-8 py-6 border-t-4 border-[#15537d]">
+                        <div class="flex flex-col justify-center items-center space-y-4">
+                            <h1 class="my-6 self-start font-semibold text-3xl text-[#15537d]">Parcel Details</h1>
+                            <div class="flex flex-row justify-center items-center space-x-2 gap-2">
+                                <p class="text-gray-700 text-lg">Parcel content: </p>
+                                <div>
+                                    {{ form2.parcel_contents }}
+                                </div>
+                                <!--Price should be herer-->
+                            </div>
+                            <div class="flex flex-row justify-center items-center space-x-2 mb-6">
+                                <p>Length: </p>
+                                {{ form2.length }}
+                                <p>Height: </p>
+                                {{ form2.height }}
+                                <p>Width: </p>
+                                {{ form2.width }}
+                            </div>
+                            <div class="bg-[#c5dfef] px-4 py-2 text-center text-md text-gray-700">Please note that under-declaring your parcel’s size or weight could result in additional surcharges</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white my-8 px-8 py-6 border-t-4 border-[#15537d]">
+                        <div class="flex flex-col justify-center items-center space-y-4">
+                            <h1 class="text-3xl font-bold text-[#15537d]">£20.00 Parcel Protection on Your Evri Drop-off Delivery</h1>
+                            <p class="font-semibold text-lg my-2 text-gray-700">Click here to find out more about fully protecting your parcel.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#c5dfef] px-6 py-4 text-lg text-gray-700 my-8">
+                        {{ form3 }} This parcel complies with the prohibited & restricted items list
+                    </div>
+        
+                    <button type="submit"
+                            class="font-bold my-4 text-lg rounded-xl px-8 py-2 outline-none border-none rounded-lg text-blue-700 bg-yellow-400 transition-all duration-300 ease-in-out hover:bg-yellow-500 hover:text-white max-[426px]:mt-8 max-[320px]:p-2 max-[320px]:px-4 whitespace-nowrap">Next Step
+                    </button>
+                </form>
+
+            </div>
+
+            <div class="w-1/3 flex flex-col justify-center items-center">
+                <div class="w-full px-6 py-6 bg-[#c5dfef] flex flex-row justify-center items-center space-x-6">
+                    <img class="w-32" src="https://www.parcel2go.com/logo/service/705.large" /> 
+                    <h1 class="text-2xl font-semibold text-[#15537d]">Parcel to GOO</h1>
+                </div>
+                <div class="w-full px-6 py-6 bg-white">
+                    <p class="text-base text-gray-700">If you’re looking for an easy and reliable service that doesn’t require anyone to be home to get their delivery, Evri Postable is for you. This service allows your courier to post items through the letterbox. Evri is a leading name in UK parcel delivery.
+
+                        If you’re a retailer, a small business or just an individual looking to send letter-size items up to 1kg in weight, Evri Postable is just the service for you. To use the Evri service, drop your post off at any of the 5,000 Evri ParcelShops across the UK. Click here to find your nearest drop off location.Evri ParcelShop Postable
+                        1 kg maximum weight
+                        35cm x 23cm x 2.5cm maximum parcel size
+                        Your postable delivery will be made within 3 working days.
+                        Letterbox Postage
+                        Evri Postable allows you to post a letter with ease, with no compromise on quality or reliability. If you do think you need letterbox postage, simply measure your item to see if it fits the letter requirements above.
+                        
+                        If you are looking for the cheapest way to send a small parcel that can fit through a standard letterbox, don’t hesitate to choose Evri Postable.</p>
+                        <h1 class="text-xl text-[#15537d] my-4">Letter box </h1>
+                        <p class="text-base text-gray-700" >Evri Postable allows you to post a letter with ease, with no compromise on quality or reliability. If you do think you need letterbox postage, simply measure your item to see if it fits the letter requirements above.
+
+                            If you are looking for the cheapest way to send a small parcel that can fit through a standard letterbox, don’t hesitate to choose Evri Postable.</p>
+                </div>
+                <div class="w-full items-center ">
+                    <button class="flex flex-row items-center justify-center w-full outline-none bg-transparent border-2 border-[#15537d] text-[#15537d] px-12 py-6 space-x-8 transition-all duration-300 ease-in-out hover:text-white hover:bg-[#15537d]">
+                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 121.86 122.88"><title>comment</title><path d="M30.28,110.09,49.37,91.78A3.84,3.84,0,0,1,52,90.72h60a2.15,2.15,0,0,0,2.16-2.16V9.82a2.16,2.16,0,0,0-.64-1.52A2.19,2.19,0,0,0,112,7.66H9.82A2.24,2.24,0,0,0,7.65,9.82V88.55a2.19,2.19,0,0,0,2.17,2.16H26.46a3.83,3.83,0,0,1,3.82,3.83v15.55ZM28.45,63.56a3.83,3.83,0,1,1,0-7.66h53a3.83,3.83,0,0,1,0,7.66Zm0-24.86a3.83,3.83,0,1,1,0-7.65h65a3.83,3.83,0,0,1,0,7.65ZM53.54,98.36,29.27,121.64a3.82,3.82,0,0,1-6.64-2.59V98.36H9.82A9.87,9.87,0,0,1,0,88.55V9.82A9.9,9.9,0,0,1,9.82,0H112a9.87,9.87,0,0,1,9.82,9.82V88.55A9.85,9.85,0,0,1,112,98.36Z"/></svg>
+                        <div class="flex flex-col justify-center items-center space-y-2">
+                            <h1 class="font-bold text-3xl whitespace-nowrap">Live Help</h1>
+                            <p class=" font-semibold text-xl whitespace-nowrap">Talk to an operator</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        updateProgress('page1');
+    </script>
+{% endblock %}
+ 

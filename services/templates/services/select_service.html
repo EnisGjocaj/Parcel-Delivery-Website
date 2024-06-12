@@ -1,0 +1,283 @@
+{% extends "core/base.html" %}
+
+{% block title %}Select a service{% endblock %}
+
+{% block content %}
+
+<div class="bg-gray-200 w-full px-4 py-2 h-full">
+
+    <div class="my-8">
+        <div class="flex flex-col items-center space-y-2">
+            <h6 class="text-slate-700 font-bold text-lg">Arrange services with:</h6>
+            <form method="GET" action="" class="my-6 px-6 py-4 flex flex-row items-center justify-center space-x-6 gap-4" >
+                <button type="submit" name="sort_by" value="speed" class="rounded-lg py-2 px-4 text-lg font-bold text-blue-600 bg-white outline-none border border-blue-700 transition-all duration-300 ease-in-out hover:bg-blue-700 hover:text-white">Filter by Speed</button>
+                <button type="submit" name="sort_by" value="price" class="rounded-lg py-2 px-4 text-lg font-bold text-blue-600 bg-white outline-none border border-blue-700 transition-all duration-300 ease-in-out hover:bg-blue-700 hover:text-white">Filter by Price</button>
+                <button type="submit" name="sort_by" value="-rating"class="rounded-lg py-2 px-4 text-lg font-bold text-blue-600 bg-white outline-none border border-blue-700 transition-all duration-300 ease-in-out hover:bg-blue-700 hover:text-white" >Filter by Rating</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="my-8">
+        <div class="w-full flex flex-col justify-center items-center space-y-4" >
+            <div class=" w-11/12 px-6 py-4 border-b border-blue-700 my-4">
+                <h1 class="text-4xl text-blue-700 font-thin"><strong class="font-bold">Services from £2.15</strong> Exc VAT</h1>
+            </div>
+            <div class="px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                
+                <div class="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-row">
+                    <div
+                      class="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                      <img
+                        src="https://images.ctfassets.net/v78wipeni189/3hrbrtL0e90lV0FM7dCFqP/9d6d12c9228901b62b857e6660ffc665/quote-result-promotion-dhl.png"
+                        alt="card-image" class="object-cover w-full h-full" />
+                    </div>
+                    <div class="p-6">
+                      <h6
+                        class="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
+                        services
+                      </h6>
+                      <h4 class="text-center block mb-2 font-sans text-3xl antialiased font-bold leading-snug tracking-normal text-[#19547C]">
+                        Convenient Collection
+                      </h4>
+                      <!-- <p class="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
+                        Like so many organizations these days, Autodesk is a company in
+                        transition. It was until recently a traditional boxed software company
+                        selling licenses. Yet its own business model disruption is only part of
+                        the story
+                      </p> -->
+                      <ul class="text-center border-b border-gray-400 px-6 py-4 list-disc font-normal text-lg">
+                            <li>Next Day Delivery</li>
+                            <li>Collection Service</li>
+                            <li>Collection Service</li>
+                      </ul>
+
+                      <div class="flex flex-col justify-center items-center space-y-2"> 
+                            <div class="font-bold text-3xl text-gray-600 my-4">$20</div>
+                            <button class="px-8 py-2 text-lg text-center rounded-xl outline-none border-none text-white font-bold bg-green-600 transition-all duration-300 ease-in-out hover:bg-green-700">Book</button>
+                      </div>
+
+                      <a href="#" class="mt-6 inline-block"><button
+                          class="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
+                          type="button">
+                          Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                          </svg></button></a>
+                    </div>
+                  </div>
+
+                  <div class="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-row">
+                    <div
+                      class="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                      <img
+                        src="https://images.ctfassets.net/v78wipeni189/11quHMvIzNlfrwL1rne72f/9a1d43fd2e504f622924b12c4560f584/quote-result-promotion-evri.png"
+                        alt="card-image" class="object-cover w-full h-full" />
+                    </div>
+                    <div class="p-6">
+                      <h6
+                        class="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
+                        services
+                      </h6>
+                      <h4 class="text-center block mb-2 font-sans text-3xl antialiased font-bold leading-snug tracking-normal text-[#19547C]">
+                        Reliable Tracked Service
+                      </h4>
+                      <ul class="text-center border-b border-gray-400 px-6 py-4 list-disc font-normal text-lg">
+                            <li>2-3 Day Delivery</li>
+                            <li>Print in Store Available</li>
+                            <li>Collection Service</li>
+                      </ul>
+
+                      <div class="flex flex-col justify-center items-center space-y-2"> 
+                            <div class="font-bold text-3xl text-gray-600 my-4">$20</div>
+                            <button class="px-8 py-2 text-lg text-center rounded-xl outline-none border-none text-white font-bold bg-green-600 transition-all duration-300 ease-in-out hover:bg-green-700">Book</button>
+                      </div>
+
+                      <a href="#" class="mt-6 inline-block"><button
+                          class="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
+                          type="button">
+                          Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                          </svg></button></a>
+                    </div>
+                  </div>
+                  
+                  <div class="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-row">
+                    <div
+                      class="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                      <img
+                        src="https://images.ctfassets.net/v78wipeni189/11quHMvIzNlfrwL1rne72f/9a1d43fd2e504f622924b12c4560f584/quote-result-promotion-evri.png"
+                        alt="card-image" class="object-cover w-full h-full" />
+                    </div>
+                    <div class="p-6">
+                      <h6
+                        class="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
+                        services
+                      </h6>
+                      <h4 class="text-center block mb-2 font-sans text-3xl antialiased font-bold leading-snug tracking-normal text-[#19547C]">
+                        Reliable Tracked Service
+                      </h4>
+                      <ul class="text-center border-b border-gray-400 px-6 py-4 list-disc font-normal text-lg">
+                            <li>2-3 Day Delivery</li>
+                            <li>Print in Store Available</li>
+                            <li>Collection Service</li>
+                      </ul>
+
+                      <div class="flex flex-col justify-center items-center space-y-2"> 
+                            <div class="font-bold text-3xl text-gray-600 my-4">$20</div>
+                            <button class="px-8 py-2 text-lg text-center rounded-xl outline-none border-none text-white font-bold bg-green-600 transition-all duration-300 ease-in-out hover:bg-green-700">Book</button>
+                      </div>
+
+                      <a href="#" class="mt-6 inline-block"><button
+                          class="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
+                          type="button">
+                          Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                          </svg></button></a>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+    </div>
+
+    <div class="my-8 mt-16">
+        <div class="w-full flex flex-col justify-center items-center space-y-4">
+            <div class=" w-11/12 px-6 py-4 border-b border-blue-700 my-4">
+                <h1 class="text-4xl text-blue-700 font-thin"><strong class="font-bold">Services from £2.15</strong> Exc VAT</h1>
+            </div>
+            <div class="w-11/12 rounded-xl">
+              <form id="service-form" method="POST" action="{% url 'services:select_service' 0 %}">
+
+                {% csrf_token %}
+                <input type="hidden" name="selected_service" id="selected_service" value="">
+
+                {% for service in services %}
+                    <div class="service w-full bg-white service rounded-xl my-8 border border-gray-400" data-speed="{{ service.speed }}" data-price="{{ service.price }}" data-rating="{{ service.rating }}">
+                        <!-- <div class="flex flex-col justify-center gap-2 space-y-2 px-2 py-2">
+                            <div class="self-start w-full px-4 py-6 flex flex-row justify-start self-start gap-4 space-x-2 border-b border-gray-400">
+                                <img class="w-16 h-8 rounded-lg" src="{{ service.image.url }}" alt="{{ service.name }}"> 
+                                <h3 class="text-md font-semibold text-blue-600">{{ service.name }}</h3>
+                                <h3 class="cursor-pointer justify-end border-l border-gray-400 px-4 underline text-lg font-normal text-blue-600">More details</h3>
+                            </div>
+
+                            <div class="px-2 py-6 flex flex-row justify-center items-center gap-2 space-x-2">
+                                <div class="rounded-lg text-black font-bold bg-white ourline-none border-2 border-gray-600 px-4 py-4 text-center ">Rating: {{ service.rating }}</div>
+                                <div></div>
+                            </div>
+
+                        </div> -->
+                        <div class="flex flex-col justify-center gap-2 space-y-2 px-2 py-2">
+                            <div class="self-start w-full px-4 py-6 flex flex-row justify-between items-start gap-4 space-x-2 border-b border-gray-400">
+                                <div class="flex flex-row space-x-6">
+                                    <img class="w-32 h-8 rounded-lg" src="{{ service.image.url }}" alt="{{ service.name }}"> 
+                                    <h3 class="text-md font-semibold text-blue-600">{{ service.name }}</h3>
+                                </div>
+                                <h3 class="cursor-pointer ml-auto border-l border-gray-400 px-4 underline text-lg font-normal text-blue-600">More details</h3>
+                            </div>
+                        
+                            <div class="px-2 py-6 flex flex-row justify-between items-center gap-2 space-x-2">
+                                <div class="flex flex-row items-center space-x-6">
+                                    <div class="flex flex-col justify-center items-center text-lg rounded-lg text-blue-800 font-bold bg-white ourline-none border border-gray-400 px-4 py-4 text-center">
+                                        <span>Rating: {{ service.rating }}</span>
+                                        <svg viewBox="0 0 1000 200" class='rating'>
+                                            <defs>
+                                              
+                      <polygon id="star" points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 "/>
+                                  
+                                              <clipPath id="stars">
+                                                <use xlink:href="#star"/>
+                                                <use xlink:href="#star" x="20%"/>
+                                                <use xlink:href="#star" x="40%"/>
+                                                <use xlink:href="#star" x="60%"/>
+                                                <use xlink:href="#star" x="80%"/>
+                                              </clipPath>
+                                  
+                                            </defs>
+                                          
+                    <rect class='rating__background' clip-path="url(#stars)"></rect>
+                  
+                    <!-- Change the width of this rect to change the rating -->
+                                            <rect  id="ratingValue" width="{{ service.rating_percentage }}%" class='rating__value' clip-path="url(#stars)"></rect>
+                  
+                    </svg> 
+                                    </div>
+
+                                    <div class="text-lg font-semibold text-blue-600">Drop Off Today</div>
+                                </div>
+
+                                <div class="px-4 border-l border-gray-400 flex flex-col justify-center items-center space-y-4">
+                                    <h3 class="text-md text-blue-600 font-semibold">Estimated Delivery:</h3> 
+                                    <button class="bg-gray-200 px-6 py-1 text-gray-700 border border-gray-700 rounded-2xl outline-none">{{ service.speed|floatformat:0 }} {{ service.speed_unit}}</button>
+                                </div>
+
+                                <div class="border-l border-gray-400 px-8">
+                                    <div class="rounded-xl flex flex-row items-center gap-2 space-x-4 bg-gray-200 px-6 py-4">
+                                        <div class="font-bold text-xl text-blue-700">
+                                            {{ service.price }} $ 
+                                            <!-- {% if sales_data_percentage %}
+                                                <span class="text-red-500">(-{{ sales_data_percentage }}%)</span>
+                                            {% endif %} -->
+                                            {% if service.id == sale_service_id %}
+                                                <span class="text-red-500">(-{{ sales_data_percentage }}%)</span>
+                                            {% endif %}
+                                        </div>
+                                        <!-- <input type="hidden" name="service_id" value="{{ service.id }}"> -->
+                                        <!-- <button type="submit" class="book-button px-4 py-6 text-lg text-center rounded-xl outline-none border-none text-white font-bold bg-green-600 transition-all duration-300 ease-in-out hover:bg-green-700">Book the service</button> -->
+                                        <button class="w-32 h-11 rounded flex border-solid border text-white bg-green-800 mx-2 justify-center place-items-center" onclick="selectService('{{ service.id }}')"><div class="">Book</div></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                    </div>
+                {% endfor %}
+            </div>
+            <button type="submit" onclick="selectService()"></button>
+          </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+Hello {{ user.username }},
+
+Thank you for signing up on our site!
+
+Best regards,
+The Site Team

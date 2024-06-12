@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+	<div class="w-1/2 p-6 mx-auto my-6 bg-slate-600 text-white rounded-xl max-[768px]:w-3/4 max-[426px]:mt-12 max-[376px]:w-5/6 max-[320px]:w-11/12">
+		<h1 class="mb-6 text-3xl font-semibold">Log in</h1>
+
+		<form method="post" action=".">
+			{% csrf_token %}
+
+			<div class="mb-3">
+				<label class="inline-block mb-2">Username</label><br>
+				{{ form.username }}
+			</div>
+
+			<div class="mb-3">
+				<label class="inline-block mb-2">Password</label><br>
+				{{ form.password }}
+			</div>
+
+			{% if form.errors or form.non_field_errors %}
+				<div class="mb-3 p-6 bg-red-100 rounded-xl">
+					{% for field in form %} 
+						{{ field.errors }}
+					{% endfor %}
+
+					{{ form.non_field_errors }}
+				</div>
+		    {% endif %}
+
+			<button class="mt-2 p-2 text-md font-bold bg-blue-700 outline-none border-none transition-all duration-300 ease-in-out hover:bg-blue-400 focus:bg-blue-400">Submit</button>
+		</form>
+	</div>
+{% endblock %}
